@@ -6,11 +6,14 @@ MARK: 共通
 /*color*/
 :root {
     --lightyellow: #FFE09A;
-    --lightblue: #EAF2FB;
+    --lightblue: #D4E8FC;
+    --lightgray: #F0F5FA;
     --aqua: #2995CA;
     --black: #2F363D;
-    --orange: #EE7900;
-    --darkorange: #8f501d;
+    --blue: #0066CC;
+    --darkblue: #004A99;
+    --skyblue: #4EAEFF;
+    --navy: #003366;
 }
 
 
@@ -68,7 +71,7 @@ MARK: FV
 
 #fv .box {
     background-color: var(--white);
-    box-shadow: 10px 10px 5px 0px rgba(238,121,0,0.3);
+    box-shadow: 10px 10px 5px 0px rgba(0,102,204,0.3);
     border-radius: 10px;
     margin: 15px 0 0;
     padding: 5px 30px 30px;
@@ -80,7 +83,7 @@ MARK: FV
 }
 
 #fv .box .title {
-    color: var(--orange);
+    color: var(--blue);
     font-weight: bold;
     font-size: var(--32px);
     margin-bottom: -10px;
@@ -129,7 +132,7 @@ MARK: ご利用企業様のお声ショートver
 }
 
 #short-voice .deco-title {
-    color: var(--orange);
+    color: var(--blue);
     text-align: center;
     font-weight: 600;
     font-size: var(--36px);
@@ -181,7 +184,7 @@ MARK: ご利用企業様のお声ショートver
 
 #short-voice .box .name {
     text-align: center;
-    color: var(--orange);
+    color: var(--blue);
     margin-top: 7px;
 }
 
@@ -197,7 +200,7 @@ MARK: ベネフィット
 MARK: フローチャット
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #sec03 .deco-title {
-    color: var(--orange);
+    color: var(--blue);
     text-align: center;
     font-weight: 600;
     font-size: var(--22px);
@@ -264,7 +267,7 @@ MARK: フローチャット
 
 
 #sec03 .balloon-right .name {
-    color: var(--orange);
+    color: var(--blue);
     font-size: var(--14px);
     margin-bottom: 10px;
     font-weight: bold;
@@ -279,7 +282,7 @@ MARK: フローチャット
 #sec03 .balloon-right .file {
     background-color: #FFF8E8;
     border-radius: 3px;
-    color: var(--orange);
+    color: var(--blue);
     font-weight: bold;
     font-size: var(--12px) !important;
     padding: 5px 15px;
@@ -368,7 +371,7 @@ MARK: 選ばれる理由・利用開始までの流れ
 }
 
 #sec05 .deco-title {
-    color: var(--orange);
+    color: var(--blue);
     text-align: center;
     font-weight: 600;
     font-size: var(--18px);
@@ -381,7 +384,7 @@ MARK: 選ばれる理由・利用開始までの流れ
 }
 
 #sec08 .deco-title {
-    color: var(--orange);
+    color: var(--blue);
     text-align: center;
     font-weight: 600;
     font-size: var(--18px);
@@ -447,7 +450,7 @@ MARK: 選ばれる理由・利用開始までの流れ
 MARK: アウトプット
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #output {
-    background: linear-gradient(90deg, rgba(255,211,109,1) 0%, rgba(238,121,0,1)100%);
+    background: linear-gradient(90deg, rgba(78,174,255,1) 0%, rgba(0,102,204,1)100%);
     /*padding: 120px 100px;*/
     padding: 120px 4%;
 }
@@ -550,7 +553,7 @@ MARK: アウトプット
 
 #output .box h4 {
     text-align: center;
-    color: var(--orange);
+    color: var(--blue);
     font-weight: bold;
     line-height: 1.5;
     font-size: var(--18px);
@@ -558,8 +561,8 @@ MARK: アウトプット
 
 #output .box .btn {
     background-color: #fff;
-    border: solid 2px var(--orange);
-    color: var(--orange);
+    border: solid 2px var(--blue);
+    color: var(--blue);
     font-size: var(--14px);
     padding: 25px 25px 25px 3px;
     width: 100%;
@@ -585,13 +588,13 @@ MARK: アウトプット
 
 
 #output .box .btn:hover {
-    border: solid 2px var(--darkorange);
-    color: var(--darkorange);
+    border: solid 2px var(--darkblue);
+    color: var(--darkblue);
 }
 
 #output .box .link {
     text-align: center;
-    color: var(--orange);
+    color: var(--blue);
     text-decoration: underline;
     font-weight: bold;
     font-size: var(--16px);
@@ -600,7 +603,7 @@ MARK: アウトプット
 }
 
 #output .box .link:hover {
-    color: var(--darkorange);
+    color: var(--darkblue);
 }
 
 #output .box .btn:hover:after {
@@ -619,7 +622,7 @@ MARK: アウトプット
 
 .modaal-content-container h3  {
     text-align: left;
-    color: var(--orange);
+    color: var(--blue);
     font-size: var(--24px);
     padding-bottom: 15px;
     border-bottom: solid 1px #AEBAC6;
@@ -658,7 +661,7 @@ MARK: アウトプット
 MARK: メリット
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #sec07 {
-    background-color: var(--lightbeige) !important; 
+    background-color: var(--lightgray) !important; 
 }
 
 #sec07 .fix .box {
@@ -693,7 +696,7 @@ MARK: ご利用の流れ
 }
 
 #sec08 .fix .box {
-        background-color: var(--lightbeige);
+        background-color: var(--lightgray);
 }
 
 
@@ -722,7 +725,7 @@ MARK: ご利用企業様の声
 }
 
 #voice .box .name {
-    color: var(--orange);
+    color: var(--blue);
     text-align: center;
     font-weight: bold;
     margin-top: 10px;
@@ -956,7 +959,7 @@ MARK: 選ばれる理由・利用開始までの流れ
 }
 
 #sec08 .deco-title {
-    color: var(--orange);
+    color: var(--blue);
     margin: 60px 0 -10px;
 }
 }
@@ -1172,7 +1175,7 @@ MARK: フローチャット
 MARK: アウトプット
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #output {
-    background: linear-gradient(0deg, rgba(255, 211, 109, 1) 0%, rgba(238, 121, 0, 1) 100%);
+    background: linear-gradient(0deg, rgba(78, 174, 255, 1) 0%, rgba(0, 102, 204, 1) 100%);
     padding: 100px 25px 60px;
 }
 
@@ -1278,7 +1281,7 @@ MARK: 選ばれる理由・利用開始までの流れ
 }
 
 #sec08 .deco-title {
-    color: var(--orange);
+    color: var(--blue);
     font-size: var(--16px);
     margin: 60px 0 -10px;
 }
@@ -1409,7 +1412,7 @@ MARK: FV
 MARK: アウトプット
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #output {
-    background: linear-gradient(0deg, rgba(255, 211, 109, 1) 0%, rgba(238, 121, 0, 1) 100%);
+    background: linear-gradient(0deg, rgba(78, 174, 255, 1) 0%, rgba(0, 102, 204, 1) 100%);
     padding: 100px 5px 60px;
 }
 }
