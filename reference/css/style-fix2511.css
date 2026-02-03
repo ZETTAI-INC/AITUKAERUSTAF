@@ -8,7 +8,8 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background: #FFFFFF;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
     border-bottom: 3px solid #4EAEFF;
     z-index: 9999;
     padding: 10px 0;
@@ -24,6 +25,18 @@ header .container {
     padding: 0 20px;
 }
 
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--blue);
+    text-decoration: none;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+header .logo:hover {
+    color: var(--darkblue);
+}
+
 header .logo img {
     height: 40px;
     width: auto;
@@ -32,7 +45,7 @@ header .logo img {
 header nav {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
 }
 
 header nav a {
@@ -67,9 +80,25 @@ body {
     padding-top: 65px;
 }
 
+/* Remove vignette/blur overlays */
+body::before,
+body::after {
+    display: none !important;
+    pointer-events: none !important;
+}
+
+html::before,
+html::after {
+    display: none !important;
+}
+
 @media screen and (max-width: 768px) {
     header {
         padding: 8px 0;
+    }
+
+    header .logo {
+        font-size: 20px;
     }
 
     header .logo img {
@@ -163,6 +192,13 @@ MARK: FV
     padding: 20px 0 0px !important;
 }
 
+/* merrybiz style FV - remove old background */
+#fv.fv-merrybiz {
+    background-image: none !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+}
+
 
 #fv .illust {
     margin-top: 30px;
@@ -173,7 +209,7 @@ MARK: FV
     box-shadow: 10px 10px 5px 0px rgba(0, 102, 204, 0.3);
     border-radius: 10px;
     margin: 15px 0 0;
-    padding: 5px 30px 30px;
+    padding: 25px 30px 30px;
     width: 88%;
 }
 
@@ -479,7 +515,7 @@ MARK: フローチャット
 
 
 #sec03 .balloon-left .name img {
-    width: 140px;
+    width: 80px;
     margin-bottom: 10px !important;
 }
 
@@ -1028,6 +1064,13 @@ MARK: FV
         background-position: top center;
         background-size: 100%;
         background-repeat: no-repeat;
+    }
+
+    /* merrybiz style FV - remove old background */
+    #fv.fv-merrybiz {
+        background-image: none !important;
+        background-color: transparent !important;
+        padding: 0 !important;
     }
 
     #fv .box {
@@ -1791,7 +1834,7 @@ MARK: AIサービス7分類スライダー
 #sec04 .ai-service-card .use-cases {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 4px;
     justify-content: center;
     margin-top: auto;
 }
@@ -1799,9 +1842,9 @@ MARK: AIサービス7分類スライダー
 #sec04 .ai-service-card .use-cases span {
     background: linear-gradient(90deg, #4EAEFF 0%, #0066CC 100%);
     color: #fff;
-    font-size: var(--11px);
+    font-size: 10px;
     font-weight: 600;
-    padding: 5px 10px;
+    padding: 4px 8px;
     border-radius: 15px;
     white-space: nowrap;
 }
