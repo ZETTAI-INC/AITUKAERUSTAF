@@ -144,8 +144,13 @@ MARK: 共通
 }
 
 
-.xl-pc { display: none !important; }
-.xs-sp { display: none !important; }
+.xl-pc {
+    display: none !important;
+}
+
+.xs-sp {
+    display: none !important;
+}
 
 /*    –––––––––––––––––––––––––––––––––––––––––––––––
 MARK: FV
@@ -165,7 +170,7 @@ MARK: FV
 
 #fv .box {
     background-color: var(--white);
-    box-shadow: 10px 10px 5px 0px rgba(0,102,204,0.3);
+    box-shadow: 10px 10px 5px 0px rgba(0, 102, 204, 0.3);
     border-radius: 10px;
     margin: 15px 0 0;
     padding: 5px 30px 30px;
@@ -288,6 +293,76 @@ MARK: ベネフィット
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #sec01 {
     padding: 50px 0 !important;
+}
+
+/*    –––––––––––––––––––––––––––––––––––––––––––––––
+MARK: サービス内容ハイライト（AIニュース＆30時間）
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#sec03 .service-highlights {
+    margin: 40px 0;
+}
+
+#sec03 .highlight-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 28px 24px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 12px rgba(0, 51, 102, 0.08);
+    border: 1px solid #e8f0f8;
+    transition: box-shadow 0.3s ease;
+}
+
+#sec03 .highlight-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 51, 102, 0.12);
+}
+
+#sec03 .highlight-badge {
+    display: inline-block;
+    background: var(--blue);
+    color: #fff;
+    font-size: var(--12px);
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+#sec03 .highlight-number {
+    color: var(--blue);
+    font-weight: 700;
+    font-size: var(--16px);
+    margin-bottom: 12px;
+    line-height: 1;
+}
+
+#sec03 .highlight-number .en {
+    font-size: var(--48px);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+#sec03 .highlight-number .unit {
+    font-size: var(--14px);
+    font-weight: 500;
+    color: var(--black);
+    margin-left: 2px;
+}
+
+#sec03 .highlight-card h4 {
+    color: var(--black);
+    font-size: var(--18px);
+    font-weight: 600;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+#sec03 .highlight-desc {
+    color: #666;
+    font-size: var(--14px);
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 0;
 }
 
 /*    –––––––––––––––––––––––––––––––––––––––––––––––
@@ -443,7 +518,7 @@ MARK: フローチャット
 
 #sec03 .after-late span {
     background-color: #ECEDEE;
-    padding: 5px 30px; 
+    padding: 5px 30px;
     border-radius: 20px;
 }
 
@@ -515,7 +590,8 @@ MARK: 選ばれる理由・利用開始までの流れ
     margin-left: 25px;
 }
 
-#sec05 .deco-title:before,#sec08 .deco-title:before {
+#sec05 .deco-title:before,
+#sec08 .deco-title:before {
     content: '';
     display: inline-block;
     width: 35px;
@@ -528,7 +604,8 @@ MARK: 選ばれる理由・利用開始までの流れ
 }
 
 
-#sec05 .deco-title:after,#sec08 .deco-title:after {
+#sec05 .deco-title:after,
+#sec08 .deco-title:after {
     content: '';
     display: inline-block;
     width: 35px;
@@ -544,7 +621,7 @@ MARK: 選ばれる理由・利用開始までの流れ
 MARK: アウトプット
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #output {
-    background: linear-gradient(90deg, rgba(78,174,255,1) 0%, rgba(0,102,204,1)100%);
+    background: linear-gradient(90deg, rgba(78, 174, 255, 1) 0%, rgba(0, 102, 204, 1)100%);
     /*padding: 120px 100px;*/
     padding: 120px 4%;
 }
@@ -592,12 +669,12 @@ MARK: アウトプット
 
 #output .balloon:before {
     content: "";
-  position: absolute;
-  top: 99%;
-  left: 50%;
-  margin-left: -15px;
-  border: 15px solid transparent;
-  border-top: 15px solid var(--black);
+    position: absolute;
+    top: 99%;
+    left: 50%;
+    margin-left: -15px;
+    border: 15px solid transparent;
+    border-top: 15px solid var(--black);
 }
 
 #output .balloon p {
@@ -714,7 +791,7 @@ MARK: アウトプット
     margin: 0 auto;
 }
 
-.modaal-content-container h3  {
+.modaal-content-container h3 {
     text-align: left;
     color: var(--blue);
     font-size: var(--24px);
@@ -755,20 +832,21 @@ MARK: アウトプット
 MARK: メリット
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #sec07 {
-    background-color: var(--lightgray) !important; 
+    background-color: var(--lightgray) !important;
 }
 
 #sec07 .fix .box {
     background-color: var(--white);
 }
 
-#sec07 .js-scrollable tbody td, #sec07 .js-scrollable tbody .ai {
+#sec07 .js-scrollable tbody td,
+#sec07 .js-scrollable tbody .ai {
     background-color: var(--white) !important;
 }
 
 #sec07 .js-scrollable tbody .cost td {
     font-size: var(--16px) !important;
-    font-weight: 500  !important;
+    font-weight: 500 !important;
     letter-spacing: 0.05rem !important;
 }
 
@@ -790,7 +868,7 @@ MARK: ご利用の流れ
 }
 
 #sec08 .fix .box {
-        background-color: var(--lightgray);
+    background-color: var(--lightgray);
 }
 
 
@@ -805,7 +883,7 @@ MARK: ご利用企業様の声
     background-color: var(--white);
     border-radius: 6px;
     padding: 40px;
-    margin: 0  auto 25px;
+    margin: 0 auto 25px;
     max-width: 800px;
 }
 
@@ -830,96 +908,103 @@ MARK: ご利用企業様の声
 MARK: レスポンシブ
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*1700px以下*/
-@media ( max-width:1700px) {
-#short-voice .col-lg-3 {
-    flex: 0 0 33%;
-    max-width: 33%;
-}
+@media (max-width:1700px) {
+    #short-voice .col-lg-3 {
+        flex: 0 0 33%;
+        max-width: 33%;
+    }
 
-#sec01 .col-lg-2 {
-    flex: 0 0 20%;
-    max-width: 20%;
-}
+    #sec01 .col-lg-2 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
 }
 
 /*1500px以下*/
-@media ( max-width:1500px) {
-            /*  –––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width:1500px) {
+
+    /*  –––––––––––––––––––––––––––––––––––––––––––––––
 MARK: FV
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-#fv .box {
-    width: 100%;
-}
+    #fv .box {
+        width: 100%;
+    }
 
-/*    –––––––––––––––––––––––––––––––––––––––––––––––
+    /*    –––––––––––––––––––––––––––––––––––––––––––––––
 MARK: アウトプット
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-#output .col-lg-3 {
-    flex: 0 0 50%;
-    max-width: 50%;
-}
+    #output .col-lg-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
 }
 
 /*1500px以下992px以上*/
-@media screen and ( max-width:1500px)  and (min-width:992px) {
-.xl-pc { display: block !important; }
-/*  –––––––––––––––––––––––––––––––––––––––––––––––
+@media screen and (max-width:1500px) and (min-width:992px) {
+    .xl-pc {
+        display: block !important;
+    }
+
+    /*  –––––––––––––––––––––––––––––––––––––––––––––––
 MARK: FV
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-#fv .box p {
-    font-size: var(--14px);
-}
+    #fv .box p {
+        font-size: var(--14px);
+    }
 
-    
-/*    –––––––––––––––––––––––––––––––––––––––––––––––
+
+    /*    –––––––––––––––––––––––––––––––––––––––––––––––
 MARK: ご利用企業様のお声ショートver
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-#short-voice .col-lg-3 {
-    flex: 0 0 33%;
-    max-width: 33%;
-}
+    #short-voice .col-lg-3 {
+        flex: 0 0 33%;
+        max-width: 33%;
+    }
 }
 
 /*1300px以下*/
-@media ( max-width:1300px) {
-/*  –––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width:1300px) {
+
+    /*  –––––––––––––––––––––––––––––––––––––––––––––––
 MARK: FV
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-#fv .box .meyasu p {
-    font-size: var(--12px);
-}
-#fv .box .meyasu p .en {
-    font-size: var(--18px);
-}
+    #fv .box .meyasu p {
+        font-size: var(--12px);
+    }
+
+    #fv .box .meyasu p .en {
+        font-size: var(--18px);
+    }
 }
 
 /*1279px以下1200px以上*/
 @media screen and (max-width: 1279px) and (min-width: 992px) {
-#sec01 .col-lg-2 {
-    flex: 0 0 20%;
-    max-width: 20%;
-}
+    #sec01 .col-lg-2 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
 }
 
 /*1200px以下992px以上*/
-@media screen and ( max-width:1200px)  and (min-width:992px) {
-        #fv .box {
-    margin: 40px 0 25px;
-    padding: 6% 30px 30px;
-    position: relative;
-    text-align: center;
-    width: 100%;
-}
-#fv .box .col-md-5 {
-    position: absolute;
-    top: -25%;
-    right: 0;
-    left: 0;
-    margin: 0 auto 10px;
-    width: 35%;
-}
+@media screen and (max-width:1200px) and (min-width:992px) {
+    #fv .box {
+        margin: 40px 0 25px;
+        padding: 6% 30px 30px;
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
 
-#fv .col-md-7 {
+    #fv .box .col-md-5 {
+        position: absolute;
+        top: -25%;
+        right: 0;
+        left: 0;
+        margin: 0 auto 10px;
+        width: 35%;
+    }
+
+    #fv .col-md-7 {
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;
@@ -933,105 +1018,131 @@ MARK: FV
 
 
 /*992px以下*/
-@media  ( max-width:991px){
-/*  –––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width:991px) {
+
+    /*  –––––––––––––––––––––––––––––––––––––––––––––––
 MARK: FV
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-#fv {
-    background-image: url(../img/fv-bg-sp.jpg);
-    background-position: top center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
+    #fv {
+        background-image: url(../img/fv-bg-sp.jpg);
+        background-position: top center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
 
-#fv .box {
-    width: 100%;
-}
+    #fv .box {
+        width: 100%;
+    }
 
-#fv .box p {
-    text-align: left;
-}
+    #fv .box p {
+        text-align: left;
+    }
 
-#fv .box .meyasu {
-    margin-top: 30px;
-}
+    #fv .box .meyasu {
+        margin-top: 30px;
+    }
 
-/*    –––––––––––––––––––––––––––––––––––––––––––––––
+    /*    –––––––––––––––––––––––––––––––––––––––––––––––
 MARK: ご利用企業様のお声ショートver
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-#short-voice .deco-title {
-    margin-bottom: 60px;
-}
+    #short-voice .deco-title {
+        margin-bottom: 60px;
+    }
 
-#short-voice .icon {
-    margin: -65px auto 3px;
-    width: 120px;
-}
+    #short-voice .icon {
+        margin: -65px auto 3px;
+        width: 120px;
+    }
 
-#short-voice .box {
-    margin-bottom: 45px;
-    padding: 40px;
-}
+    #short-voice .box {
+        margin-bottom: 45px;
+        padding: 40px;
+    }
 
-#short-voice .box .name {
-    margin-bottom: 10px;
-    font-weight: bold;
-}
+    #short-voice .box .name {
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
 
-#short-voice .col-lg-3 {
-    flex: 0 0 100%;
-    max-width: 100%;
-}
+    #short-voice .col-lg-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 
-#sec01 .col-lg-2 {
-    -ms-flex: 0 0 58.333333%;
-    flex: 0 0 58.333333%;
-    max-width: 58.333333%;
-}
+    #sec01 .col-lg-2 {
+        -ms-flex: 0 0 58.333333%;
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+    }
 
 
-/*    –––––––––––––––––––––––––––––––––––––––––––––––
+    /*    –––––––––––––––––––––––––––––––––––––––––––––––
 MARK: フローチャット
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-#sec03 .wrap-r .balloon-right p {
-    text-align: left;
-    margin-bottom: 10px;
-}
-#sec03 .wrap-l .balloon-left p {
-    text-align: left;
-    margin-bottom: 10px;
-}
+    #sec03 .wrap-r .balloon-right p {
+        text-align: left;
+        margin-bottom: 10px;
+    }
 
-/*    –––––––––––––––––––––––––––––––––––––––––––––––
+    #sec03 .wrap-l .balloon-left p {
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    /*    –––––––––––––––––––––––––––––––––––––––––––––––
+MARK: サービスハイライト（992px以下）
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+    #sec03 .service-highlights {
+        margin: 35px 0;
+    }
+
+    #sec03 .highlight-card {
+        padding: 24px 20px;
+    }
+
+    #sec03 .highlight-number .en {
+        font-size: var(--40px);
+    }
+
+    #sec03 .highlight-card h4 {
+        font-size: var(--16px);
+    }
+
+    #sec03 .highlight-desc {
+        font-size: var(--13px);
+    }
+
+    /*    –––––––––––––––––––––––––––––––––––––––––––––––
 MARK: アウトプット
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-#output {
-    padding: 120px 15px 100px;
-}
-#output .box .docs {
-    padding: 40px 25px;
-}
+    #output {
+        padding: 120px 15px 100px;
+    }
 
-/*    –––––––––––––––––––––––––––––––––––––––––––––––
+    #output .box .docs {
+        padding: 40px 25px;
+    }
+
+    /*    –––––––––––––––––––––––––––––––––––––––––––––––
 MARK: ご利用企業様の声
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-#voice {
-    padding: 120px 15px 80px;
-}
+    #voice {
+        padding: 120px 15px 80px;
+    }
 
-#voice h2 {
-    margin-bottom: 60px;
-}
+    #voice h2 {
+        margin-bottom: 60px;
+    }
 
-#voice .box {
-    padding: 40px;
-    margin: 0 auto 50px;
-}
+    #voice .box {
+        padding: 40px;
+        margin: 0 auto 50px;
+    }
 
-#voice .box img {
-    margin: -65px auto 2px;
-    width: 120px;
-}
+    #voice .box img {
+        margin: -65px auto 2px;
+        width: 120px;
+    }
 }
 
 /*768px以下600px以上*/
@@ -1044,31 +1155,32 @@ MARK: ご利用企業様の声
 
 
 /*992px以下768以上*/
-@media screen and (max-width: 992px) and (min-width: 769px){
-/*    –––––––––––––––––––––––––––––––––––––––––––––––
+@media screen and (max-width: 992px) and (min-width: 769px) {
+
+    /*    –––––––––––––––––––––––––––––––––––––––––––––––
 MARK: 選ばれる理由・利用開始までの流れ
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-#sec05 .deco-title {
-    margin: 30px 0;
-}
+    #sec05 .deco-title {
+        margin: 30px 0;
+    }
 
-#sec08 .deco-title {
-    color: var(--blue);
-    margin: 60px 0 -10px;
-}
+    #sec08 .deco-title {
+        color: var(--blue);
+        margin: 60px 0 -10px;
+    }
 }
 
 /*768px以下*/
 @media (max-width: 768px) {
 
-/*  –––––––––––––––––––––––––––––––––––––––––––––––
+    /*  –––––––––––––––––––––––––––––––––––––––––––––––
 MARK: FV
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-#fv {
-    padding: 0 !important;
-}
+    #fv {
+        padding: 0 !important;
+    }
 
-#fv .col-md-7 {
+    #fv .col-md-7 {
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;
@@ -1079,130 +1191,173 @@ MARK: FV
     }
 
     #fv .box {
-    margin: 70px 0 25px;
-    padding: 12% 30px 20px;
-    position: relative;
-}
+        margin: 70px 0 25px;
+        padding: 12% 30px 20px;
+        position: relative;
+    }
 
-#fv .box p {
-    line-height: 1.5;
-}
+    #fv .box p {
+        line-height: 1.5;
+    }
 
-#fv .box .icon {
-    margin: 0;
-}
+    #fv .box .icon {
+        margin: 0;
+    }
 
 
-#fv .box .title {
-    margin-bottom: -5px;
-    text-align: center;
-    font-size: var(--32px) !important;
-}
+    #fv .box .title {
+        margin-bottom: -5px;
+        text-align: center;
+        font-size: var(--32px) !important;
+    }
 
-#fv .box .title span {
-    font-size: var(--24px);
-}
+    #fv .box .title span {
+        font-size: var(--24px);
+    }
 
-#fv .box p {
-    text-align: center;
-    font-size: var(--14px);
-}
+    #fv .box p {
+        text-align: center;
+        font-size: var(--14px);
+    }
 
-#fv .col-lg-6 {
-    padding: 5px;
-}
+    #fv .col-lg-6 {
+        padding: 5px;
+    }
 
-#fv .box .col-md-5 {
-    position: absolute;
-    top: -11%;
-    right: 0;
-    left: 0;
-    margin: 0 auto 10px;
-    width: 35%;
-}
+    #fv .box .col-md-5 {
+        position: absolute;
+        top: -11%;
+        right: 0;
+        left: 0;
+        margin: 0 auto 10px;
+        width: 35%;
+    }
 
     #fv .box .meyasu {
         margin-top: 20px;
     }
 
-#fv .box .meyasu p .en {
-    font-size: var(--18px);
-}
+    #fv .box .meyasu p .en {
+        font-size: var(--18px);
+    }
 
-#fv .box .meyasu p {
-    font-size: var(--12px);
-    padding: 3px;
-    margin: 0 4px 12px;
-}
+    #fv .box .meyasu p {
+        font-size: var(--12px);
+        padding: 3px;
+        margin: 0 4px 12px;
+    }
 
 
 
-/*    –––––––––––––––––––––––––––––––––––––––––––––––
+    /*    –––––––––––––––––––––––––––––––––––––––––––––––
 MARK: ご利用企業様のお声ショートver
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-#short-voice {
-    padding: 60px 0 20px;
-}
+    #short-voice {
+        padding: 60px 0 20px;
+    }
 
-#short-voice .deco-title {
-    font-size: var(--22px);
-    margin-bottom: 40px;
-}
+    #short-voice .deco-title {
+        font-size: var(--22px);
+        margin-bottom: 40px;
+    }
 
-#short-voice .deco-title:after {
-    width: 25px;
-    height: 25px;
-    margin-left: 8px;
-}
+    #short-voice .deco-title:after {
+        width: 25px;
+        height: 25px;
+        margin-left: 8px;
+    }
 
-#short-voice .deco-title:before {
-    width: 25px;
-    height: 25px;
-    margin-right: 8px;
-}
+    #short-voice .deco-title:before {
+        width: 25px;
+        height: 25px;
+        margin-right: 8px;
+    }
 
-#short-voice .icon {
-    margin: -65px auto 3px;
-    width: 100px;
-}
+    #short-voice .icon {
+        margin: -65px auto 3px;
+        width: 100px;
+    }
 
-#short-voice .box {
-    margin-bottom: 45px;
-    padding: 40px 25px 25px;
-}
+    #short-voice .box {
+        margin-bottom: 45px;
+        padding: 40px 25px 25px;
+    }
 
-#short-voice .box .name {
-    margin-bottom: 10px;
-    font-weight: bold;
-}
+    #short-voice .box .name {
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
 
 
-#sec01 .col-lg-2 {
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-}
+    #sec01 .col-lg-2 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 
-/*    –––––––––––––––––––––––––––––––––––––––––––––––
+    /*    –––––––––––––––––––––––––––––––––––––––––––––––
+MARK: サービスハイライト（768px以下）
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+    #sec03 .service-highlights {
+        margin: 25px 0;
+    }
+
+    #sec03 .highlight-card {
+        padding: 20px 18px;
+        border-radius: 10px;
+        margin-bottom: 12px;
+    }
+
+    #sec03 .highlight-badge {
+        font-size: var(--11px);
+        padding: 3px 10px;
+        margin-bottom: 10px;
+    }
+
+    #sec03 .highlight-number {
+        font-size: var(--14px);
+        margin-bottom: 10px;
+    }
+
+    #sec03 .highlight-number .en {
+        font-size: var(--36px);
+    }
+
+    #sec03 .highlight-card h4 {
+        font-size: var(--15px);
+        margin-bottom: 6px;
+    }
+
+    #sec03 .highlight-desc {
+        font-size: var(--12px);
+        line-height: 1.6;
+    }
+
+    #sec03 .highlight-desc {
+        font-size: var(--14px);
+        text-align: center;
+    }
+
+    /*    –––––––––––––––––––––––––––––––––––––––––––––––
 MARK: フローチャット
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-#sec03 .deco-title {
-    font-size: var(--18px);
-    margin-bottom: 10px !important;
-}
+    #sec03 .deco-title {
+        font-size: var(--18px);
+        margin-bottom: 10px !important;
+    }
 
-#sec03 .deco-title:before {
-    width: 25px;
-    height: 25px;
-    margin-right: 12px;
-}
+    #sec03 .deco-title:before {
+        width: 25px;
+        height: 25px;
+        margin-right: 12px;
+    }
 
-#sec03 .deco-title:after {
-    width: 25px;
-    height: 25px;
-    margin-left: 12px;
-}
+    #sec03 .deco-title:after {
+        width: 25px;
+        height: 25px;
+        margin-left: 12px;
+    }
 
     #sec03 .box h3 {
         line-height: 1.6;
@@ -1210,149 +1365,150 @@ MARK: フローチャット
     }
 
     #sec03 .wrap-r .icon {
-    margin: 0 0 0 15px !important;
-    height: 50px;
-    width: 50px;
-}
+        margin: 0 0 0 15px !important;
+        height: 50px;
+        width: 50px;
+    }
 
-#sec03 .wrap-r .balloon-right {
-    padding: 15px;
-}
+    #sec03 .wrap-r .balloon-right {
+        padding: 15px;
+    }
 
-#sec03 .wrap-r .balloon-right p {
-    text-align: left;
-    margin-bottom: 10px;
-}
+    #sec03 .wrap-r .balloon-right p {
+        text-align: left;
+        margin-bottom: 10px;
+    }
 
-#sec03 .balloon-right .file {
-    margin: 10px 0 0 !important;
-}
+    #sec03 .balloon-right .file {
+        margin: 10px 0 0 !important;
+    }
 
-#sec03 .balloon-left .file {
-    margin: 10px 0 0 !important;
-}
+    #sec03 .balloon-left .file {
+        margin: 10px 0 0 !important;
+    }
 
-#sec03 .time-right {
-    margin: 5px 0 20px !important;
-}
+    #sec03 .time-right {
+        margin: 5px 0 20px !important;
+    }
 
-#sec03 .wrap-l .balloon-left {
-    padding: 15px;
-}
+    #sec03 .wrap-l .balloon-left {
+        padding: 15px;
+    }
 
-#sec03 .wrap-l .icon {
-    margin: 0 15px 0 0px !important;
-    height: 50px;
-    width: 50px;
-}
+    #sec03 .wrap-l .icon {
+        margin: 0 15px 0 0px !important;
+        height: 50px;
+        width: 50px;
+    }
 
-#sec03 .wrap-l .balloon-left p {
-    text-align: left;
-    margin-bottom: 10px;
-}
+    #sec03 .wrap-l .balloon-left p {
+        text-align: left;
+        margin-bottom: 10px;
+    }
 
-#sec03 .balloon-left .name img {
-    margin-bottom: 0px !important;
-}
+    #sec03 .balloon-left .name img {
+        margin-bottom: 0px !important;
+    }
 
-#sec03 .time-left {
-    text-align: left;
-    margin: 5px 0 20px !important;
+    #sec03 .time-left {
+        text-align: left;
+        margin: 5px 0 20px !important;
 
-}
+    }
 
-#sec03 .after-late {
-    margin-bottom: 30px !important;
-}
+    #sec03 .after-late {
+        margin-bottom: 30px !important;
+    }
 
-/*    –––––––––––––––––––––––––––––––––––––––––––––––
+    /*    –––––––––––––––––––––––––––––––––––––––––––––––
 MARK: アウトプット
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-#output {
-    background: linear-gradient(0deg, rgba(78, 174, 255, 1) 0%, rgba(0, 102, 204, 1) 100%);
-    padding: 100px 25px 60px;
-}
+    #output {
+        background: linear-gradient(0deg, rgba(78, 174, 255, 1) 0%, rgba(0, 102, 204, 1) 100%);
+        padding: 100px 25px 60px;
+    }
 
-#output h2 {
-    font-size: var(--64px);
-    margin-bottom: 10px;
-    letter-spacing: 0.1rem;
-    line-height: 0.55;
-}
-#output h2 strong {
-    font-size: var(--28px);
-}
+    #output h2 {
+        font-size: var(--64px);
+        margin-bottom: 10px;
+        letter-spacing: 0.1rem;
+        line-height: 0.55;
+    }
 
-#output .col-lg-3 {
-    flex: 0 0 100%;
-    max-width: 100%;
-}
+    #output h2 strong {
+        font-size: var(--28px);
+    }
 
-#output .balloon {
-    margin: 45px 0px 25px;
-}
+    #output .col-lg-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 
-#output .balloon p {
-    font-size: var(--20px);
-    line-height: 1.5;
-}
+    #output .balloon {
+        margin: 45px 0px 25px;
+    }
 
-#output .balloon-two {
-    padding: 10px 10px 20px;
-}
+    #output .balloon p {
+        font-size: var(--20px);
+        line-height: 1.5;
+    }
 
-#output .box h4 {
-    font-size: var(--16px);
-    margin-bottom: 20px;
-}
+    #output .balloon-two {
+        padding: 10px 10px 20px;
+    }
 
-#output .box p {
-    font-size: var(--14px);
-    margin-bottom: 20px;
-}
+    #output .box h4 {
+        font-size: var(--16px);
+        margin-bottom: 20px;
+    }
 
-#output .box .docs {
-    padding: 40px 25px;
-}
+    #output .box p {
+        font-size: var(--14px);
+        margin-bottom: 20px;
+    }
 
-#output .box .btn {
-    padding: 12px 5px 15px;
-    margin-bottom: 25px;
-}
+    #output .box .docs {
+        padding: 40px 25px;
+    }
 
-#output .box .btn:after {
-    width: 25px;
-    height: 25px;
-    margin-top: -13px;
-}
+    #output .box .btn {
+        padding: 12px 5px 15px;
+        margin-bottom: 25px;
+    }
 
-/*ポップアップ*/
-.modaal-content-container h3 {
-    font-size: var(--16px);
-    line-height: 1.5;
-}
+    #output .box .btn:after {
+        width: 25px;
+        height: 25px;
+        margin-top: -13px;
+    }
 
-.modaal-content-container {
-    padding: 15px;
-}
+    /*ポップアップ*/
+    .modaal-content-container h3 {
+        font-size: var(--16px);
+        line-height: 1.5;
+    }
 
-.modaal-content-container .inline_close img {
-    right: 15px;
-    top: 15px;
-    width: 40px;
-    height: 40px;
-}
+    .modaal-content-container {
+        padding: 15px;
+    }
 
-.modaal-content-container .caption {
-    font-size: var(--14px);
-    margin: 10px 0 40px;
-}
+    .modaal-content-container .inline_close img {
+        right: 15px;
+        top: 15px;
+        width: 40px;
+        height: 40px;
+    }
 
-.modaal-content-container .border {
-    margin-bottom: 40px;
-}
+    .modaal-content-container .caption {
+        font-size: var(--14px);
+        margin: 10px 0 40px;
+    }
 
-/*    –––––––––––––––––––––––––––––––––––––––––––––––
+    .modaal-content-container .border {
+        margin-bottom: 40px;
+    }
+
+    /*    –––––––––––––––––––––––––––––––––––––––––––––––
 MARK: 選ばれる理由
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
     #sec05 h2 {
@@ -1361,81 +1517,84 @@ MARK: 選ばれる理由
 
 
 
-/*    –––––––––––––––––––––––––––––––––––––––––––––––
+    /*    –––––––––––––––––––––––––––––––––––––––––––––––
 MARK: 選ばれる理由・利用開始までの流れ
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-#sec03 .deco-title {
-    font-size: var(--16px);
-    margin: 40px 0 20px;
-}
+    #sec03 .deco-title {
+        font-size: var(--16px);
+        margin: 40px 0 20px;
+    }
 
-#sec05 .deco-title {
-    font-size: var(--16px);
-    margin: 30px 0;
-}
+    #sec05 .deco-title {
+        font-size: var(--16px);
+        margin: 30px 0;
+    }
 
-#sec08 .deco-title {
-    color: var(--blue);
-    font-size: var(--16px);
-    margin: 60px 0 -10px;
-}
+    #sec08 .deco-title {
+        color: var(--blue);
+        font-size: var(--16px);
+        margin: 60px 0 -10px;
+    }
 
-#sec03 .deco-title:before {
-    width: 25px;
-    height: 25px;
-    margin-right: 5px;
-}
-
-
-#sec03 .deco-title:after {
-    width: 25px;
-    height: 25px;
-    margin-left: 5px;
-}
-
-#sec05 .deco-title:before,#sec08 .deco-title:before {
-    width: 25px;
-    height: 25px;
-    margin-right: 5px;
-}
+    #sec03 .deco-title:before {
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+    }
 
 
-#sec05 .deco-title:after,#sec08 .deco-title:after {
-    width: 25px;
-    height: 25px;
-    margin-left: 5px;
-}
+    #sec03 .deco-title:after {
+        width: 25px;
+        height: 25px;
+        margin-left: 5px;
+    }
+
+    #sec05 .deco-title:before,
+    #sec08 .deco-title:before {
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+    }
 
 
-/*    –––––––––––––––––––––––––––––––––––––––––––––––
+    #sec05 .deco-title:after,
+    #sec08 .deco-title:after {
+        width: 25px;
+        height: 25px;
+        margin-left: 5px;
+    }
+
+
+    /*    –––––––––––––––––––––––––––––––––––––––––––––––
 MARK: ご利用企業様の声
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-#voice {
-    padding: 80px 15px 30px;
-}
+    #voice {
+        padding: 80px 15px 30px;
+    }
 
-#voice h2 {
-    margin-bottom: 60px;
-}
+    #voice h2 {
+        margin-bottom: 60px;
+    }
 
-#voice .box {
-    padding: 40px 25px 15px;
-    margin: 0 auto 50px;
-}
+    #voice .box {
+        padding: 40px 25px 15px;
+        margin: 0 auto 50px;
+    }
 
-#voice .box img {
-    margin: -65px auto 2px;
-    width: 100px;
-}
+    #voice .box img {
+        margin: -65px auto 2px;
+        width: 100px;
+    }
 
-#voice .box p {
-    font-size: var(--14px);
-}
+    #voice .box p {
+        font-size: var(--14px);
+    }
 }
 
 /*550px以下*/
 @media (max-width: 550px) {
-/*  –––––––––––––––––––––––––––––––––––––––––––––––
+
+    /*  –––––––––––––––––––––––––––––––––––––––––––––––
 MARK: FV
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
     #fv .logo {
@@ -1443,88 +1602,382 @@ MARK: FV
     }
 
     #fv .box {
-    margin: 45px 0 25px;
-    padding: 13% 30px 10px;
-    position: relative;
-}
+        margin: 45px 0 25px;
+        padding: 13% 30px 10px;
+        position: relative;
+    }
 
-#fv .box p {
-    line-height: 1.5;
-}
+    #fv .box p {
+        line-height: 1.5;
+    }
 
-#fv .box .icon {
-    margin: 20px 0 0 0;
-}
+    #fv .box .icon {
+        margin: 20px 0 0 0;
+    }
 
 
-#fv .box .title {
-    margin-bottom: -5px;
-    text-align: center;
-}
+    #fv .box .title {
+        margin-bottom: -5px;
+        text-align: center;
+    }
 
-#fv .box .title span {
-    font-size: var(--22px);
-}
+    #fv .box .title span {
+        font-size: var(--22px);
+    }
 
-#fv .box .title .en {
-    font-size: var(--50px);
-}
+    #fv .box .title .en {
+        font-size: var(--50px);
+    }
 
-#fv .box p {
-    text-align: center;
-    font-size: var(--14px);
-}
+    #fv .box p {
+        text-align: center;
+        font-size: var(--14px);
+    }
 
-#fv .col-lg-6 {
-    padding: 5px;
-}
+    #fv .col-lg-6 {
+        padding: 5px;
+    }
 
-#fv .box .col-md-5 {
-    position: absolute;
-    top: -55px;
-    right: 0;
-    left: 0;
-    margin: 0 auto 10px;
-    width: 180px;
-}
+    #fv .box .col-md-5 {
+        position: absolute;
+        top: -55px;
+        right: 0;
+        left: 0;
+        margin: 0 auto 10px;
+        width: 180px;
+    }
 
     #fv .box .meyasu {
         margin-top: 20px;
     }
 
-#fv .box .meyasu p .en {
-    font-size: var(--18px);
-}
+    #fv .box .meyasu p .en {
+        font-size: var(--18px);
+    }
 
-#fv .box .meyasu p {
-    font-size: var(--12px);
-    padding: 3px;
-    margin: 0 4px 12px;
-}
+    #fv .box .meyasu p {
+        font-size: var(--12px);
+        padding: 3px;
+        margin: 0 4px 12px;
+    }
 
-/*  –––––––––––––––––––––––––––––––––––––––––––––––
+    /*  –––––––––––––––––––––––––––––––––––––––––––––––
 MARK: アウトプット
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-#output {
-    background: linear-gradient(0deg, rgba(78, 174, 255, 1) 0%, rgba(0, 102, 204, 1) 100%);
-    padding: 100px 5px 60px;
-}
+    #output {
+        background: linear-gradient(0deg, rgba(78, 174, 255, 1) 0%, rgba(0, 102, 204, 1) 100%);
+        padding: 100px 5px 60px;
+    }
 }
 
+
+/*    –––––––––––––––––––––––––––––––––––––––––––––––
+MARK: AIサービス7分類スライダー
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#sec04 .ai-service-slider-wrap {
+    position: relative;
+    padding: 0 60px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+#sec04 .ai-service-swiper {
+    overflow: hidden;
+    padding: 10px 0 20px;
+}
+
+#sec04 .swiper-slide {
+    height: auto;
+}
+
+#sec04 .ai-service-card {
+    padding: 30px 25px 25px;
+    height: 100%;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--blue);
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.08);
+    background-color: var(--white);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#sec04 .ai-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 102, 204, 0.18);
+}
+
+#sec04 .ai-service-card .service-number {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: var(--40px);
+    font-weight: 900;
+    color: rgba(78, 174, 255, 0.15);
+    font-family: "DM Sans", sans-serif;
+    line-height: 1;
+}
+
+#sec04 .ai-service-card h4 {
+    color: var(--blue);
+    font-size: var(--22px);
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px solid var(--blue);
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+}
+
+#sec04 .ai-service-card .service-subtitle {
+    color: var(--skyblue);
+    font-size: var(--14px);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 15px;
+    letter-spacing: 0.05rem;
+}
+
+#sec04 .ai-service-card .service-desc {
+    color: var(--black);
+    font-size: var(--13px);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 12px 10px;
+    background: linear-gradient(135deg, #E8F4FF 0%, #D4E8FC 100%);
+    border-radius: 6px;
+    border: none;
+}
+
+#sec04 .ai-service-card ul {
+    list-style: none;
+    padding: 12px 12px 8px 12px;
+    margin-bottom: 15px;
+    background-color: var(--lightgray);
+    border-radius: 6px;
+    flex-grow: 1;
+}
+
+#sec04 .ai-service-card ul li {
+    font-size: var(--13px);
+    font-weight: 500;
+    position: relative;
+    padding-left: 28px !important;
+    text-indent: 0 !important;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+#sec04 .ai-service-card ul li:before {
+    content: '✓' !important;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 18px !important;
+    height: 18px !important;
+    background-color: var(--blue) !important;
+    background-image: none !important;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+#sec04 .ai-service-card .use-cases {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+    margin-top: auto;
+}
+
+#sec04 .ai-service-card .use-cases span {
+    background: linear-gradient(90deg, #4EAEFF 0%, #0066CC 100%);
+    color: #fff;
+    font-size: var(--11px);
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 15px;
+    white-space: nowrap;
+}
+
+/* ナビゲーションボタン */
+#sec04 .ai-service-prev,
+#sec04 .ai-service-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(90deg, #4EAEFF 0%, #0066CC 100%);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+}
+
+#sec04 .ai-service-prev:hover,
+#sec04 .ai-service-next:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
+}
+
+#sec04 .ai-service-prev {
+    left: 5px;
+}
+
+#sec04 .ai-service-next {
+    right: 5px;
+}
+
+#sec04 .ai-service-prev span,
+#sec04 .ai-service-next span {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+#sec04 .ai-service-prev.swiper-button-disabled,
+#sec04 .ai-service-next.swiper-button-disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* ページネーション */
+#sec04 .ai-service-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 25px;
+}
+
+#sec04 .ai-service-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: var(--lightblue);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+#sec04 .ai-service-pagination .swiper-pagination-bullet-active {
+    background: linear-gradient(90deg, #4EAEFF 0%, #0066CC 100%);
+    width: 30px;
+    border-radius: 6px;
+}
+
+/* 992px以下 - タブレット */
+@media (max-width: 991px) {
+    #sec04 .ai-service-slider-wrap {
+        padding: 0 50px;
+    }
+
+    #sec04 .ai-service-prev,
+    #sec04 .ai-service-next {
+        width: 40px;
+        height: 40px;
+    }
+
+    #sec04 .ai-service-prev span,
+    #sec04 .ai-service-next span {
+        font-size: 18px;
+    }
+}
+
+/* 768px以下 - スマートフォン */
+@media (max-width: 768px) {
+    #sec04 .ai-service-slider-wrap {
+        padding: 0 15px;
+    }
+
+    #sec04 .ai-service-prev,
+    #sec04 .ai-service-next {
+        display: none;
+    }
+
+    #sec04 .ai-service-card {
+        padding: 25px 20px 20px;
+    }
+
+    #sec04 .ai-service-card .service-number {
+        font-size: var(--36px);
+    }
+
+    #sec04 .ai-service-card h4 {
+        font-size: var(--20px);
+    }
+
+    #sec04 .ai-service-card .service-subtitle {
+        font-size: var(--13px);
+    }
+
+    #sec04 .ai-service-card .service-desc {
+        font-size: var(--12px);
+        padding: 10px 8px;
+    }
+
+    #sec04 .ai-service-card ul {
+        padding: 10px 10px 6px 10px;
+    }
+
+    #sec04 .ai-service-card ul li {
+        font-size: var(--12px);
+        padding-left: 24px !important;
+        text-indent: 0 !important;
+        margin-bottom: 6px;
+    }
+
+    #sec04 .ai-service-card ul li:before {
+        width: 16px !important;
+        height: 16px !important;
+        font-size: 10px;
+        background-color: var(--blue) !important;
+        background-image: none !important;
+    }
+
+    #sec04 .ai-service-card .use-cases span {
+        font-size: var(--10px);
+        padding: 4px 8px;
+    }
+
+    #sec04 .ai-service-pagination {
+        margin-top: 20px;
+    }
+
+    #sec04 .ai-service-pagination .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+    }
+
+    #sec04 .ai-service-pagination .swiper-pagination-bullet-active {
+        width: 25px;
+    }
+}
 
 /*350px以下*/
 @media (max-width: 350px) {
-        .xs-sp { 
-        display: block !important; 
+    .xs-sp {
+        display: block !important;
     }
-/*  –––––––––––––––––––––––––––––––––––––––––––––––
+
+    /*  –––––––––––––––––––––––––––––––––––––––––––––––
 MARK: FV
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
     #fv .box {
         margin: 35px 0 25px;
         padding: 20% 15px 10px;
     }
-        #fv .box .icon {
+
+    #fv .box .icon {
         margin: 30px 0 0 0;
     }
 
