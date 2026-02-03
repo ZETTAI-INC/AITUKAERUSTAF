@@ -2,8 +2,8 @@ services:
   - type: web
     name: otasuke-ai
     runtime: node
-    buildCommand: npm install -g serve
-    startCommand: serve -s . -l $PORT
+    buildCommand: npm install
+    startCommand: npm start
     pullRequestPreviewsEnabled: true
     envVars:
       - key: NODE_ENV
