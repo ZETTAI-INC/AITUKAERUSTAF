@@ -2,9 +2,16 @@ services:
   - type: web
     name: otasuke-ai
     runtime: node
+    repo: https://github.com/ZETTAI-INC/AITUKAERUSTAF
+    branch: feature/blue-design-conversion
+    region: singapore
+    plan: starter
     buildCommand: npm install
     startCommand: npm start
-    pullRequestPreviewsEnabled: true
+    healthCheckPath: /
+    autoDeploy: true
     envVars:
       - key: NODE_ENV
         value: production
+      - key: PORT
+        value: 10000
