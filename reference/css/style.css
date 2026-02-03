@@ -264,12 +264,14 @@ FV (merrybiz style)
 
 .fv-main_inner {
     margin-top: 24px;
+    padding: 0 5%;
 }
 
 @media screen and (min-width: 768px) {
     .fv-main_inner {
         width: 90%;
         margin: 0 auto;
+        padding: 0;
     }
 }
 
@@ -737,6 +739,7 @@ FV (merrybiz style)
     border-radius: 32px;
     border: 2px solid #FFD700;
     text-decoration: none;
+    position: relative;
 }
 
 @media screen and (min-width: 768px) {
@@ -918,6 +921,119 @@ FV (merrybiz style)
     .fv-main_contactBtn-telTime {
         margin-left: 8px;
         letter-spacing: 0.5px;
+    }
+}
+
+/* モバイル専用スタイル (767px以下) */
+@media screen and (max-width: 767px) {
+    .fv-main_visual {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .fv-main_inner {
+        margin-top: 16px;
+    }
+
+    .fv-main_title h1 {
+        font-size: 32px;
+        padding: 0 10px;
+    }
+
+    .fv-main_image {
+        width: 70%;
+        margin: 20px auto;
+    }
+
+    .fv-main_text h2 {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .fv-main_text p {
+        font-size: 14px;
+        padding: 0 10px;
+        line-height: 1.6;
+    }
+
+    .fv-main_contact {
+        padding: 20px 15px;
+    }
+
+    .fv-main_contactBtn-document,
+    .fv-main_contactBtn-contact {
+        margin-bottom: 10px;
+    }
+
+    .fv-main_contact li a {
+        height: 70px;
+        padding: 10px;
+    }
+
+    .fv-main_contact li a p > span {
+        font-size: 14px;
+        margin-left: 5px;
+    }
+
+    .fv-main_contact li a p > span span {
+        font-size: 10px;
+        margin-top: 4px;
+    }
+
+    .fv-main_contactBtn-document a p:before,
+    .fv-main_contactBtn-contact a p:before {
+        width: 40px;
+        height: 40px;
+        background-size: 20px;
+        flex-shrink: 0;
+    }
+
+    .fv-main_contactBtn-tel {
+        margin-top: 15px;
+    }
+
+    .fv-main_contactBtn-tel a {
+        height: 60px;
+        justify-content: center;
+    }
+
+    .fv-main_contactBtn-tel p {
+        padding-left: 65px;
+    }
+
+    .fv-main_contactBtn-tel p:before {
+        width: 56px;
+        height: 56px;
+        top: 0;
+        left: 0;
+        background-size: 28px;
+    }
+
+    .fv-main_contactBtn-telText {
+        font-size: 11px;
+    }
+
+    .fv-main_contactBtn-telNum {
+        font-size: 20px;
+    }
+
+    .fv-main_contactBtn-telTime {
+        font-size: 9px;
+    }
+}
+
+/* 極小画面用 (375px以下) */
+@media screen and (max-width: 375px) {
+    .fv-main_title h1 {
+        font-size: 28px;
+    }
+
+    .fv-main_contact li a p > span {
+        font-size: 12px;
+    }
+
+    .fv-main_contactBtn-telNum {
+        font-size: 18px;
     }
 }
 
@@ -2285,6 +2401,177 @@ form thanksページ
             text-align: center;
             font-size: var(--12px);
         }
+
+
+/*    –––––––––––––––––––––––––––––––––––––––––––––––
+Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#footer {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+#footer .footer-main {
+    padding: 60px 0 40px;
+}
+
+#footer .footer-logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--white);
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+#footer .footer-logo:hover {
+    color: var(--skyblue);
+}
+
+#footer .footer-tagline {
+    font-size: var(--18px);
+    font-weight: bold;
+    color: var(--skyblue);
+    margin-bottom: 10px;
+}
+
+#footer .footer-description {
+    font-size: var(--14px);
+    line-height: 1.8;
+    color: #aaa;
+    margin-bottom: 0;
+}
+
+#footer .footer-nav h4 {
+    font-size: var(--16px);
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+#footer .footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#footer .footer-nav ul li {
+    margin-bottom: 12px;
+}
+
+#footer .footer-nav ul li a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: var(--14px);
+    transition: 0.3s;
+}
+
+#footer .footer-nav ul li a:hover {
+    color: var(--skyblue);
+}
+
+#footer .footer-contact h4 {
+    font-size: var(--16px);
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+#footer .footer-tel {
+    margin-bottom: 5px;
+}
+
+#footer .footer-tel a {
+    font-size: var(--32px);
+    font-weight: bold;
+    color: var(--skyblue);
+    text-decoration: none;
+    font-family: "DM Sans", sans-serif;
+}
+
+#footer .footer-tel a:hover {
+    color: var(--white);
+}
+
+#footer .footer-tel-note {
+    font-size: var(--12px);
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+#footer .footer-cta-btn {
+    display: inline-block;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: var(--14px);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#footer .footer-cta-btn:hover {
+    background-color: var(--skyblue);
+    color: var(--white);
+}
+
+#footer .footer-bottom {
+    background-color: #1a1f24;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#footer .footer-bottom p {
+    margin-bottom: 0;
+    color: #666;
+    font-size: var(--12px);
+}
+
+/* Footer レスポンシブ */
+@media (max-width: 991px) {
+    #footer .footer-logo-area {
+        margin-bottom: 40px;
+    }
+
+    #footer .footer-nav {
+        margin-bottom: 30px;
+    }
+
+    #footer .footer-contact {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    #footer .footer-main {
+        padding: 40px 0 30px;
+    }
+
+    #footer .footer-logo {
+        font-size: 24px;
+    }
+
+    #footer .footer-tagline {
+        font-size: var(--16px);
+    }
+
+    #footer .footer-nav h4,
+    #footer .footer-contact h4 {
+        font-size: var(--14px);
+        margin-bottom: 15px;
+    }
+
+    #footer .footer-tel a {
+        font-size: var(--28px);
+    }
+
+    #footer .footer-cta-btn {
+        display: block;
+        text-align: center;
+    }
+}
+
 
         /*768px以下*/
 @media (max-width: 768px) {
