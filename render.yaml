@@ -1,15 +1,10 @@
 services:
   - type: web
     name: otasuke-ai
-    runtime: static
-    buildCommand: ""
-    staticPublishPath: .
+    runtime: node
+    buildCommand: npm install -g serve
+    startCommand: serve -s . -l $PORT
     pullRequestPreviewsEnabled: true
-    headers:
-      - path: /*
-        name: Cache-Control
-        value: public, max-age=3600
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
+    envVars:
+      - key: NODE_ENV
+        value: production
