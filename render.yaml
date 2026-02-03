@@ -1,15 +1,11 @@
 services:
   - type: web
     name: otasuke-ai
-    runtime: static
+    env: static
     repo: https://github.com/ZETTAI-INC/AITUKAERUSTAF
     branch: feature/blue-design-conversion
     region: singapore
     plan: starter
     buildCommand: ""
-    staticPublishPath: .
+    staticPublishPath: ./
     autoDeploy: true
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
