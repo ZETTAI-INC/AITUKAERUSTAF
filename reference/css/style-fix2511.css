@@ -5,7 +5,7 @@ MARK: 共通
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*color*/
 :root {
-    --lightyellow: #B3D9FF;
+    --lightyellow: #99CCFF;
     --lightblue: #D4E8FC;
     --lightgray: #F0F5FA;
     --aqua: #2995CA;
@@ -111,7 +111,7 @@ MARK: FV
     font-size: var(--14px);
     font-weight: bold;
     text-align: center;
-    background-color: #B3D9FF;
+    background-color: #99CCFF;
     padding: 3px;
     margin: 0 4px;
     border-radius: 50px;
@@ -249,7 +249,7 @@ MARK: フローチャット
 }
 
 #sec03 .wrap-r .balloon-right {
-    background-color: #B3D9FF;
+    background-color: #99CCFF;
     border-radius: 10px 0 10px 10px;
     padding: 20px;
 }
@@ -507,7 +507,7 @@ MARK: アウトプット
 }
 
 #output .balloon p {
-    color: #B3D9FF;
+    color: #99CCFF;
     font-size: var(--22px);
     margin-bottom: 0;
     line-height: 1.4;
@@ -528,7 +528,7 @@ MARK: アウトプット
 
 #output .box .meyasu {
     position: absolute;
-    background-color: #B3D9FF;
+    background-color: #99CCFF;
     top: 15px;
     left: 15px;
     font-size: var(--14px);
