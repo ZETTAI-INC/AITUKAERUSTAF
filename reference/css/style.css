@@ -5,15 +5,15 @@
 /*color*/
 :root {
     --black: #2F363D;
-    --orange: #EE7900;
-    --darkorange: #8f501d;
-    --lightorange: #FEE9D4;
-    --lightbeige: #FCF7EE;
-    --yellow: #FFCA4E;
+    --blue: #0066CC;
+    --darkblue: #004A99;
+    --lightblue: #D4E8FC;
+    --lightgray: #F0F5FA;
+    --skyblue: #4EAEFF;
     --bluegray: #AEBAC6;
-    --blue: #0759A7;
+    --navy: #003366;
     --white:#fff;
-    
+
 }
 
 
@@ -62,7 +62,7 @@ letter-spacing: 0.065rem;
 font-family: "Noto Sans JP", sans-serif !important;
 color: var(--black);
 overflow: hidden;
-background-color: var(--lightbeige);
+background-color: var(--lightgray);
 }
 
 h2 {
@@ -91,7 +91,7 @@ h3:after {
     content: '';
     margin: auto;
     border-radius: 2px;
-    background: var(--orange);
+    background: var(--blue);
 }
 
 .en {
@@ -108,7 +108,7 @@ h3:after {
 
 .en-title span {
     font-family: "Noto Sans JP", sans-serif;
-    color: var(--orange);
+    color: var(--blue);
     font-size: var(--22px);
     letter-spacing: 0.04rem;
 }
@@ -157,7 +157,7 @@ h3:after {
 .btn-wh {
     background-color: var(--white);
     font-size: var(--28px);
-    color: var(--orange);
+    color: var(--blue);
     border-radius: 70px;
     font-weight: bold;
     position: relative;
@@ -197,7 +197,7 @@ h3:after {
 
 .btn-wh:hover {
     color: var(--white);
-    background-color: var(--darkorange);
+    background-color: var(--darkblue);
 }
 
 .mb80 {
@@ -215,7 +215,7 @@ table {
 FV
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #fv {
-    background-color: var(--lightbeige);
+    background-color: var(--lightgray);
     /*padding: 40px 0 200px;*/
     padding: 35px 0 0px;
     /*padding: 70px 10% 0;*/
@@ -250,7 +250,7 @@ FV
 }
 
 #fv .catch span {
-    color: var(--orange);
+    color: var(--blue);
 }
 
 #fv .logo {
@@ -276,7 +276,7 @@ FV
 }
 
 #fv .deco .en {
-    color: var(--orange);
+    color: var(--blue);
     font-size: var(--100px);
     letter-spacing: 0.5rem;
     font-weight: 900;
@@ -537,12 +537,12 @@ sec03
 sec04
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #sec04 {
-    background-color: var(--lightbeige);
+    background-color: var(--lightgray);
     padding: 140px 15px;
 }
 
 #sec04 .deco-title {
-    color: var(--orange);
+    color: var(--blue);
     text-align: center;
     font-weight: 600;
     font-size: var(--22px);
@@ -600,7 +600,7 @@ sec04
 }
 
 #sec04 .box h4 {
-    color: var(--orange);
+    color: var(--blue);
     font-size: var(--28px);
     font-weight: bold;
     text-align: center;
@@ -667,7 +667,7 @@ sec05
     font-family: "DM Sans", sans-serif;
     font-weight: 900;
     font-size: var(--130px);
-    color: var(--lightorange);
+    color: var(--lightblue);
     line-height: 0.15;
     margin: 60px 0;
     letter-spacing: 0.45rem;
@@ -687,11 +687,11 @@ sec05
 }
 
 #sec05 h2 span {
-    color: var(--orange);
+    color: var(--blue);
 }
 
 #sec05 .box {
-    background-color: var(--lightbeige);
+    background-color: var(--lightgray);
     border-radius: 6px;
     max-width: 650px;
     position: relative;
@@ -724,7 +724,7 @@ sec05
 
 
 #sec05 .box .en {
-    color: var(--orange);
+    color: var(--blue);
     font-weight: 700;
     font-size: var(--72px);
     line-height: 0.5;
@@ -741,7 +741,7 @@ sec05
 #sec05 .box h5 {
     font-weight: 600;
     font-size: var(--28px);
-    border-bottom: solid 1px var(--orange);
+    border-bottom: solid 1px var(--blue);
     padding-bottom: 25px;
     margin-bottom: 25px;
     line-height: 1.5;
@@ -792,7 +792,7 @@ sec05
 sec06
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #sec06 {
-    background-color: var(--lightbeige);
+    background-color: var(--lightgray);
     padding: 120px 15px;
 }
 
@@ -810,7 +810,7 @@ sec06
 }
 
 #sec06 .box h4 {
-    color: var(--orange);
+    color: var(--blue);
     font-size: var(--32px);
     font-weight: bold;
     border-bottom: solid 1px var(--bluegray);
@@ -833,11 +833,11 @@ sec06
 
 #sec06 .box .item {
     font-weight: bold;
-    background-color: var(--lightbeige);
+    background-color: var(--lightgray);
     font-size: var(--20px);
     padding: 17px 10px;
     border-radius: 6px;
-    color: var(--orange);
+    color: var(--blue);
 }
 
 #sec06 .under-text {
@@ -883,7 +883,7 @@ sec07
 }
 
 #sec07 .box {
-    background-color: var(--lightbeige);
+    background-color: var(--lightgray);
     border-radius: 6px;
     padding: 60px;
     text-align: center;
@@ -899,13 +899,13 @@ sec07
     font-size: var(--28px);
     font-weight: bold;
     line-height: 1.3;
-    border-bottom: solid 1px var(--orange);
+    border-bottom: solid 1px var(--blue);
     padding-bottom: 25px;
     margin-bottom: 25px;
 }
 
 #sec07 .box h5 span {
-    color: var(--orange);
+    color: var(--blue);
     font-size: var(--16px);
 }
 
@@ -987,7 +987,7 @@ sec07
 }
 
 #sec07 .deco span {
-    color: var(--orange);
+    color: var(--blue);
     font-size: var(--60px);
 }
 
@@ -1040,8 +1040,8 @@ sec07
 
 
 #sec07 .js-scrollable thead .ai {
-    background-color: var(--orange);
-    border: solid 6px var(--orange);
+    background-color: var(--blue);
+    border: solid 6px var(--blue);
     width: 30%;
 }
 
@@ -1055,8 +1055,8 @@ sec07
 }
 
 #sec07 .js-scrollable tbody .ai {
-    background-color: var(--lightbeige);
-    color: var(--orange);
+    background-color: var(--lightgray);
+    color: var(--blue);
     font-weight: bold;
 }
 
@@ -1081,13 +1081,13 @@ sec07
 }
 
 #sec07 .js-scrollable tbody .ai {
-    border-left: solid 6px var(--orange);
-    border-right: solid 6px var(--orange);
+    border-left: solid 6px var(--blue);
+    border-right: solid 6px var(--blue);
 }
 
 
 #sec07 .js-scrollable tbody tr:last-child .ai {
-    border-bottom: solid 6px var(--orange);
+    border-bottom: solid 6px var(--blue);
 }
 
 
@@ -1096,7 +1096,7 @@ sec07
 sec08
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #sec08 {
-    background-color: var(--lightbeige);
+    background-color: var(--lightgray);
     padding: 120px 15px;
 }
 
@@ -1110,7 +1110,7 @@ sec08
 
 #sec08 .box .en {
     font-weight: bold;
-    color: var(--orange);
+    color: var(--blue);
     font-size: var(--24px);
 }
 
@@ -1168,7 +1168,7 @@ sec09
     height: 3px;
     content: '';
     border-radius: 3px;
-    background: var(--orange);
+    background: var(--blue);
 }
 
 #sec09 p {
@@ -1182,7 +1182,7 @@ sec09
 sec10
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #sec10 {
-    /*background-color: var(--lightbeige);*/
+    /*background-color: var(--lightgray);*/
     background-color: var(--white);
     padding: 120px 15px;
 }
@@ -1197,7 +1197,7 @@ sec10
 
 #sec10 .box {
     /*background-color: var(--white);*/
-    background-color: var(--lightbeige);
+    background-color: var(--lightgray);
     border-radius: 6px;
     margin-bottom: 20px;
     padding: 30px 30px 10px;
@@ -1393,7 +1393,7 @@ form
 }
 
 #form p {
-    color: var(--orange);
+    color: var(--blue);
     font-size: var(--22px);
     font-weight: bold;
     margin-bottom: 40px;
@@ -1582,7 +1582,7 @@ iframe .v-text-field.v-text-field--enclosed .v-text-field__details {
         }
 
         #form .box-fix #submit {
-            background-color: var(--orange);
+            background-color: var(--blue);
             color: var(--white);
             font-size: var(--18px);
             border: solid 0px;
@@ -1635,7 +1635,7 @@ iframe .v-text-field.v-text-field--enclosed .v-text-field__details {
         }
 
         #form .confirm .btn {
-            background-color: var(--orange);
+            background-color: var(--blue);
             color: var(--white);
             font-size: var(--18px);
             border: solid 0px;
