@@ -9,6 +9,7 @@
     --darkblue: #004A99;
     --lightblue: #D4E8FC;
     --lightgray: #F0F5FA;
+    --lightyellow: #B3D9FF;
     --skyblue: #4EAEFF;
     --bluegray: #AEBAC6;
     --navy: #003366;
@@ -324,7 +325,7 @@ FV
 
 /*ボタンエリア*/
 #fv .btn-band {
-    background: linear-gradient(90deg, rgba(255,211,109,1) 0%, rgba(238,121,0,1)100%);
+    background: linear-gradient(90deg, rgba(78,174,255,1) 0%, rgba(0,102,204,1)100%);
     /*position: absolute;*/
     bottom: 0;
     left: 0;
@@ -439,7 +440,7 @@ sec02
 sec03
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #sec03 {
-    background: linear-gradient(180deg, rgba(255,211,109,1) 0%, rgba(238,121,0,1)100%);
+    background: linear-gradient(180deg, rgba(78,174,255,1) 0%, rgba(0,102,204,1)100%);
     padding: 160px 15px 100px;
     border-radius: 0 0 50px 50px;
     z-index: 10;
@@ -524,7 +525,7 @@ sec03
 }
 
 #sec03 .box .marker span {
-    background: linear-gradient(transparent 75%, var(--yellow) 80%);
+    background: linear-gradient(transparent 75%, var(--skyblue) 80%);
 }
 
 #sec03 .box .employee {

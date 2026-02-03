@@ -5,7 +5,7 @@ MARK: 共通
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*color*/
 :root {
-    --lightyellow: #FFE09A;
+    --lightyellow: #B3D9FF;
     --lightblue: #D4E8FC;
     --lightgray: #F0F5FA;
     --aqua: #2995CA;
@@ -111,7 +111,7 @@ MARK: FV
     font-size: var(--14px);
     font-weight: bold;
     text-align: center;
-    background-color: var(--lightyellow);
+    background-color: #B3D9FF;
     padding: 3px;
     margin: 0 4px;
     border-radius: 50px;
@@ -249,7 +249,7 @@ MARK: フローチャット
 }
 
 #sec03 .wrap-r .balloon-right {
-    background-color: var(--lightyellow);
+    background-color: #B3D9FF;
     border-radius: 10px 0 10px 10px;
     padding: 20px;
 }
@@ -280,7 +280,7 @@ MARK: フローチャット
 }
 
 #sec03 .balloon-right .file {
-    background-color: #FFF8E8;
+    background-color: #E8F4FF;
     border-radius: 3px;
     color: var(--blue);
     font-weight: bold;
@@ -458,7 +458,7 @@ MARK: アウトプット
 
 
 #output h2 {
-    color: #ffe19a81;
+    color: #b3d9ff81;
     font-size: var(--130px);
     font-family: "DM Sans", sans-serif;
     letter-spacing: 0.4rem;
@@ -507,7 +507,7 @@ MARK: アウトプット
 }
 
 #output .balloon p {
-    color: var(--lightyellow);
+    color: #B3D9FF;
     font-size: var(--22px);
     margin-bottom: 0;
     line-height: 1.4;
@@ -528,7 +528,7 @@ MARK: アウトプット
 
 #output .box .meyasu {
     position: absolute;
-    background-color: var(--lightyellow);
+    background-color: #B3D9FF;
     top: 15px;
     left: 15px;
     font-size: var(--14px);
