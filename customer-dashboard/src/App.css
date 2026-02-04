@@ -1,0 +1,432 @@
+/* グローバルスタイル */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+  min-height: 100vh;
+}
+
+/* カード hover エフェクト */
+.ant-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.ant-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 51, 102, 0.12);
+  transform: translateY(-2px);
+}
+
+.ant-card-hoverable:hover {
+  border-color: rgba(0, 51, 102, 0.2);
+}
+
+/* テーブル行 hover */
+.ant-table-tbody > tr {
+  transition: all 0.2s ease;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: linear-gradient(90deg, #e6f4ff 0%, #f0f7ff 100%) !important;
+}
+
+/* スクロールバー */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+/* メニュースタイル強化 */
+.ant-menu-item {
+  margin: 4px 8px !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+.ant-menu-item:hover {
+  background: linear-gradient(90deg, #f0f7ff 0%, transparent 100%) !important;
+}
+
+.ant-menu-item-selected {
+  background: linear-gradient(90deg, #e6f4ff 0%, #f0f7ff 100%) !important;
+  font-weight: 600 !important;
+}
+
+.ant-menu-item-selected::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 60%;
+  background: linear-gradient(180deg, #003366 0%, #0066cc 100%);
+  border-radius: 0 2px 2px 0;
+}
+
+/* ボタンのグラデーション */
+.ant-btn-primary:not(:disabled) {
+  background: linear-gradient(135deg, #003366 0%, #0066cc 100%);
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
+  transition: all 0.3s ease;
+}
+
+.ant-btn-primary:not(:disabled):hover {
+  background: linear-gradient(135deg, #004080 0%, #0077ee 100%);
+  box-shadow: 0 6px 16px rgba(0, 51, 102, 0.4);
+  transform: translateY(-1px);
+}
+
+.ant-btn-primary:not(:disabled):active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 51, 102, 0.3);
+}
+
+/* プログレスバー */
+.ant-progress-bg {
+  background: linear-gradient(90deg, #003366 0%, #0066cc 100%) !important;
+}
+
+.ant-progress-circle .ant-progress-text {
+  font-weight: 600;
+}
+
+/* バッジ */
+.ant-badge-status-processing {
+  background-color: #0066cc;
+}
+
+/* タグ */
+.ant-tag {
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 2px 10px;
+}
+
+/* 入力フィールド focus */
+.ant-input:focus,
+.ant-input-focused,
+.ant-select-focused .ant-select-selector {
+  border-color: #003366 !important;
+  box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.08) !important;
+}
+
+.ant-input {
+  transition: all 0.2s ease;
+}
+
+.ant-input:hover {
+  border-color: #0066cc;
+}
+
+/* アバター */
+.ant-avatar {
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* カード タイトル */
+.ant-card-head {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ant-card-head-title {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* 統計カード */
+.ant-statistic-title {
+  font-weight: 500;
+  color: #666;
+  font-size: 13px;
+}
+
+.ant-statistic-content-value {
+  color: #003366;
+  font-weight: 700;
+}
+
+/* リスト項目 */
+.ant-list-item {
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  margin: 0 -8px;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}
+
+.ant-list-item:hover {
+  background: linear-gradient(90deg, #f8fafc 0%, transparent 100%);
+}
+
+/* タイムライン */
+.ant-timeline-item-head {
+  background-color: #fff;
+}
+
+.ant-timeline-item-tail {
+  border-left: 2px solid #e8e8e8;
+}
+
+/* フォーム ラベル */
+.ant-form-item-label > label {
+  font-weight: 500;
+  color: #333;
+}
+
+/* Descriptions */
+.ant-descriptions-item-label {
+  font-weight: 500;
+  color: #666;
+}
+
+/* アップロード */
+.ant-upload-drag {
+  border: 2px dashed #d9d9d9 !important;
+  border-radius: 12px !important;
+  transition: all 0.3s ease;
+}
+
+.ant-upload-drag:hover {
+  border-color: #003366 !important;
+  background: #f8fafc;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+  .ant-layout-sider {
+    position: fixed !important;
+    z-index: 1000;
+  }
+
+  .ant-card {
+    margin-bottom: 16px;
+  }
+
+  .ant-card:hover {
+    transform: none;
+  }
+}
+
+/* ダッシュボード統計カード */
+.dashboard-stat-card .ant-statistic-content {
+  font-size: 28px;
+}
+
+/* メッセージバブル */
+.message-bubble {
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.message-bubble.customer {
+  background: linear-gradient(135deg, #e6f7ff 0%, #d6f0ff 100%);
+  border-bottom-right-radius: 4px;
+}
+
+.message-bubble.staff {
+  background: linear-gradient(135deg, #f5f5f5 0%, #ececec 100%);
+  border-bottom-left-radius: 4px;
+}
+
+/* ニュースカード */
+.news-card {
+  transition: all 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* 依頼カード */
+.request-card {
+  transition: all 0.3s ease;
+}
+
+.request-card:hover {
+  border-color: #003366;
+  box-shadow: 0 4px 16px rgba(0, 51, 102, 0.15);
+}
+
+/* ローディングスピナー */
+.ant-spin-dot-item {
+  background-color: #003366;
+}
+
+/* 空状態 */
+.ant-empty-description {
+  color: #8c8c8c;
+}
+
+/* ドロップダウン */
+.ant-dropdown {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12) !important;
+  border-radius: 12px !important;
+}
+
+.ant-dropdown-menu {
+  padding: 8px !important;
+  border-radius: 12px !important;
+}
+
+.ant-dropdown-menu-item {
+  border-radius: 8px !important;
+  margin: 2px 0 !important;
+}
+
+.ant-dropdown-menu-item:hover {
+  background: linear-gradient(90deg, #e6f4ff 0%, #f5faff 100%);
+}
+
+/* 通知バッジ */
+.ant-badge-count {
+  background: linear-gradient(135deg, #003366 0%, #0055aa 100%);
+  box-shadow: 0 2px 8px rgba(0, 51, 102, 0.4);
+}
+
+/* タブ */
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #003366;
+  font-weight: 600;
+}
+
+.ant-tabs-ink-bar {
+  background: linear-gradient(90deg, #003366 0%, #0066cc 100%);
+  height: 3px !important;
+  border-radius: 2px;
+}
+
+/* スイッチ */
+.ant-switch-checked {
+  background: linear-gradient(90deg, #003366 0%, #0066cc 100%);
+}
+
+/* セレクト */
+.ant-select-item-option-selected {
+  background: linear-gradient(90deg, #e6f4ff 0%, #f5faff 100%) !important;
+  font-weight: 500;
+}
+
+/* ページネーション */
+.ant-pagination-item {
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.ant-pagination-item-active {
+  border-color: #003366;
+  background: linear-gradient(135deg, #003366 0%, #0055aa 100%);
+}
+
+.ant-pagination-item-active a {
+  color: #fff;
+}
+
+.ant-pagination-item:hover {
+  border-color: #0066cc;
+}
+
+.ant-pagination-item:hover a {
+  color: #003366;
+}
+
+/* Tooltip */
+.ant-tooltip-inner {
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+/* Modal */
+.ant-modal-content {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.ant-modal-header {
+  border-radius: 16px 16px 0 0;
+}
+
+/* Divider */
+.ant-divider {
+  border-color: #f0f0f0;
+}
+
+/* Typography */
+.ant-typography h1,
+.ant-typography h2,
+.ant-typography h3,
+.ant-typography h4,
+.ant-typography h5 {
+  font-weight: 600;
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease;
+}
+
+/* フォーカスリング */
+*:focus-visible {
+  outline: 2px solid rgba(0, 51, 102, 0.3);
+  outline-offset: 2px;
+}
+
+/* プレースホルダー */
+::placeholder {
+  color: #bfbfbf;
+}
+
+/* セレクション */
+::selection {
+  background: rgba(0, 51, 102, 0.2);
+  color: #003366;
+}

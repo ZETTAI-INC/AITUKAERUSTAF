@@ -315,6 +315,25 @@ header.merrybiz-header {
     box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35);
 }
 
+.nav-cta-login {
+    background: linear-gradient(135deg, #003366 0%, #0066cc 100%);
+    color: #fff;
+    border: 2px solid transparent;
+}
+
+.nav-cta-login:hover {
+    background: linear-gradient(135deg, #002244 0%, #0055aa 100%);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 51, 102, 0.35);
+}
+
+.nav-cta-login svg path,
+.nav-cta-login svg polyline,
+.nav-cta-login svg line {
+    stroke: #fff;
+}
+
 /* ハンバーガーメニュー（PC非表示） */
 .hamburger {
     display: none;
@@ -2510,4 +2529,43 @@ MARK: FV
         margin: 30px 0 0 0;
     }
 
+}/* AI Tools Section (Shared) */
+.price-tools-container {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 30px;
+    text-align: center;
+}
+
+.price-tools-desc {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+}
+
+.price-tools-img-wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #eee;
+    padding: 10px;
+    background: #fafafa;
+}
+
+.price-tools-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .price-tools-container {
+        padding: 20px;
+    }
+
+    .price-tools-desc {
+        font-size: 14px;
+    }
 }
