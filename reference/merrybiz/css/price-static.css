@@ -1,0 +1,42 @@
+/* 料金ページ - 静的2列表示 */
+.price__list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    width: 100% !important;
+    max-width: 1140px !important;
+    margin: 0 auto 20px !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.price__list li {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: relative !important;
+    transform: none !important;
+    width: calc(50% - 20px) !important;
+    min-width: 400px !important;
+    max-width: 540px !important;
+    padding: 15px !important;
+    box-sizing: border-box !important;
+}
+
+.price__list__box {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    height: 100%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 900px) {
+    .price__list li {
+        width: 100% !important;
+        min-width: auto !important;
+        max-width: 100% !important;
+    }
+}

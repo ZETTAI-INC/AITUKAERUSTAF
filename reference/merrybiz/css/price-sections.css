@@ -1,0 +1,781 @@
+/* =====================================================
+   料金ページ - シャープUI
+   ===================================================== */
+
+/* ページトップエリア（ヒーロー） */
+.page-topArea {
+    background: #1a1a2e;
+    padding: 70px 20px 60px;
+    margin-bottom: 0;
+    text-align: center;
+    position: relative;
+    border-bottom: 4px solid #0066cc;
+}
+
+.page-topArea_title {
+    color: #fff;
+    font-size: 38px;
+    font-weight: 700;
+    margin: 0 0 16px;
+    letter-spacing: 0.1em;
+    position: relative;
+}
+
+.page-pankuzu {
+    margin: 0;
+}
+
+.page-pankuzu ul {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.page-pankuzu ul li {
+    color: #888;
+    font-size: 13px;
+}
+
+.page-pankuzu ul li a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.page-pankuzu ul li a:hover {
+    color: #fff;
+    opacity: 1;
+}
+
+.page-pankuzu ul li:not(:last-child)::after {
+    content: ">";
+    margin-left: 8px;
+    color: #555;
+}
+
+/* 料金説明エリア */
+#pricePageArea.pageArea {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px 50px;
+}
+
+#pricePageArea .sectionTtl {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0 0 16px;
+    letter-spacing: 0.05em;
+}
+
+#pricePageArea .sectionTtl::after {
+    display: none;
+}
+
+#pricePageArea > p {
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.9;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+/* メインお問い合わせボタン */
+#pricePageArea > .moreButton {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 50px;
+}
+
+.moreButton.moreButton__contact {
+    display: inline-block;
+    background: #0066cc;
+    color: #fff;
+    padding: 16px 48px;
+    border-radius: 0;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid #0066cc;
+    transition: all 0.2s;
+    letter-spacing: 0.05em;
+}
+
+.moreButton.moreButton__contact:hover {
+    background: #004d99;
+    border-color: #004d99;
+    opacity: 1;
+}
+
+/* タブナビゲーション */
+.price__category__wrap {
+    max-width: 1100px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+}
+
+.price__category {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 2px solid #ddd;
+}
+
+.price__category li {
+    padding: 14px 28px;
+    border: none;
+    border-right: 1px solid #ddd;
+    background: #fff;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.price__category li:last-child {
+    border-right: none;
+}
+
+.price__category li:hover {
+    background: #f5f5f5;
+}
+
+.price__category li.active {
+    background: #1a1a2e;
+    color: #fff;
+}
+
+/* 料金セクション */
+.price-sections {
+    max-width: 1100px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+}
+
+.price-section {
+    margin-bottom: 50px;
+}
+
+.price-section:last-child {
+    margin-bottom: 0;
+}
+
+.price-section-title {
+    background: #1a1a2e;
+    color: #fff;
+    padding: 16px 24px;
+    margin: 0 0 24px 0;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    border-left: 5px solid #0066cc;
+}
+
+.price-section-title::before {
+    display: none;
+}
+
+/* 価格カード一覧 */
+.price__list--static {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.price__list--static li {
+    display: block;
+    position: relative;
+}
+
+/* 価格カード */
+.price__list--static .price__list__box {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 28px;
+    height: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.price__list--static .price__list__box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #0066cc;
+    transition: width 0.3s;
+}
+
+.price__list--static .price__list__box:hover {
+    border-color: #0066cc;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.price__list--static .price__list__box:hover::before {
+    width: 100%;
+}
+
+/* カードタイトル */
+.price__list--static .price__list__box h2 {
+    color: #1a1a2e;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+/* 企業情報 */
+.price__list--static .price__list__company {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    background: #f8f8f8;
+    padding: 14px 16px;
+    border-left: 3px solid #0066cc;
+}
+
+.price__list--static .price__list__company__left {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    background: #1a1a2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.price__list--static .price__list__company__left img {
+    width: 24px;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+.price__list--static .price__list__company__right {
+    font-size: 13px;
+    color: #444;
+    line-height: 1.7;
+}
+
+/* 詳細リスト */
+.price__list--static dl {
+    margin: 0;
+}
+
+.price__list--static dt {
+    margin-top: 16px;
+}
+
+.price__list--static dt:first-of-type {
+    margin-top: 0;
+}
+
+.price__list--static dt span {
+    display: inline-block;
+    background: #1a1a2e;
+    color: #fff;
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.price__list--static dd {
+    margin: 10px 0 0 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* 料金表示 */
+.price__list--static dd span {
+    display: inline-block;
+    color: #0066cc;
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 8px;
+    letter-spacing: -0.02em;
+}
+
+/* 1件のみの場合 */
+.price__list--static li:only-child {
+    grid-column: 1 / -1;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+/* セクション非表示 */
+.price-section.hidden {
+    display: none;
+}
+
+/* 元のリスト非表示 */
+#animationList.price__list {
+    display: none !important;
+}
+
+/* =====================================================
+   CTAボタンエリア
+   ===================================================== */
+#contactButtonArea {
+    background: #f5f5f5 !important;
+    padding: 70px 20px !important;
+    border-top: 1px solid #ddd;
+}
+
+#contactButtonArea .contactButtons {
+    max-width: 900px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    gap: 24px !important;
+    box-sizing: border-box !important;
+}
+
+#contactButtonArea .contactButton__box {
+    flex: 1 1 0 !important;
+    width: auto !important;
+    max-width: 420px !important;
+    min-width: 0 !important;
+    background: #fff !important;
+    padding: 40px 32px !important;
+    text-align: center !important;
+    border: 1px solid #ddd !important;
+    transition: all 0.2s !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+}
+
+#contactButtonArea .contactButton__box::before {
+    display: none !important;
+}
+
+#contactButtonArea .contactButton__box--left,
+#contactButtonArea .contactButton__box--right {
+    flex: 1 1 0 !important;
+    max-width: 420px !important;
+    margin: 0 !important;
+}
+
+#contactButtonArea .contactButton__box:hover {
+    border-color: #0066cc !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+    transform: none !important;
+    background: #fff !important;
+}
+
+#contactButtonArea .contactButton__icon--siryo,
+#contactButtonArea .contactButton__icon--contact {
+    width: 64px !important;
+    height: 64px !important;
+    margin: 0 auto 20px !important;
+    background: #1a1a2e !important;
+    border-radius: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: none !important;
+}
+
+#contactButtonArea .contactButton__icon--siryo img,
+#contactButtonArea .contactButton__icon--contact img {
+    width: 28px !important;
+    height: auto !important;
+    filter: brightness(0) invert(1) !important;
+}
+
+#contactButtonArea .contactButton__box h3 {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #1a1a2e !important;
+    margin: 0 0 24px !important;
+    letter-spacing: 0.03em !important;
+}
+
+#contactButtonArea .contactButton__box .moreButton {
+    display: inline-block !important;
+    background: #0066cc !important;
+    color: #fff !important;
+    padding: 14px 36px !important;
+    border-radius: 0 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    border: 2px solid #0066cc !important;
+    transition: all 0.2s !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    letter-spacing: 0.03em !important;
+}
+
+#contactButtonArea .contactButton__box .moreButton:hover {
+    background: #004d99 !important;
+    border-color: #004d99 !important;
+    transform: none !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+}
+
+/* =====================================================
+   フッター
+   ===================================================== */
+.st-footer {
+    background: #1a1a2e;
+    color: #fff;
+}
+
+.st-footer_inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px 40px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 40px;
+}
+
+.st-footer_serviceTitle {
+    font-size: 12px;
+    font-weight: 700;
+    color: #0066cc;
+    display: block;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+.st-footer_serviceList ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.st-footer_serviceItem {
+    margin-bottom: 10px;
+}
+
+.st-footer_serviceItem a {
+    color: #999;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s;
+}
+
+.st-footer_serviceItem a:hover {
+    color: #fff;
+    opacity: 1;
+}
+
+.st-footer_nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.st-footer_nav a {
+    color: #999;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s;
+}
+
+.st-footer_nav a:hover {
+    color: #fff;
+    opacity: 1;
+}
+
+.st-footer_companyLogo {
+    margin-bottom: 16px;
+}
+
+.st-footer_companyLogo img {
+    height: 36px;
+    width: auto;
+}
+
+.st-footer_companyTel a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.st-footer_companyTel span {
+    display: block;
+    font-size: 11px;
+    color: #666;
+    margin-top: 4px;
+}
+
+.st-footer_companyAddress {
+    margin-top: 14px;
+}
+
+.st-footer_companyAddress p {
+    font-size: 12px;
+    color: #666;
+    margin: 0 0 4px;
+    line-height: 1.6;
+}
+
+.st-footer_companySns {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.st-footer_companyFb a,
+.st-footer_companyX a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: #333;
+    transition: background 0.2s;
+}
+
+.st-footer_companyFb a:hover,
+.st-footer_companyX a:hover {
+    background: #0066cc;
+    opacity: 1;
+}
+
+.st-footer_companyFb img,
+.st-footer_companyX img {
+    width: 16px;
+    height: auto;
+}
+
+.st-footer_external {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    padding-top: 24px;
+    border-top: 1px solid #333;
+    grid-column: 1 / -1;
+}
+
+.st-footer_externalItem a {
+    color: #666;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.2s;
+}
+
+.st-footer_externalItem a:hover {
+    color: #fff;
+    opacity: 1;
+}
+
+.st-footer_aside {
+    background: #111;
+    padding: 20px;
+}
+
+.st-footer_asideLink,
+.st-footer_asideCopy {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.st-footer_asideLink small,
+.st-footer_asideCopy small {
+    color: #555;
+    font-size: 11px;
+}
+
+.st-footer_asideItem a {
+    color: #555;
+    text-decoration: none;
+    font-size: 11px;
+    transition: color 0.2s;
+}
+
+.st-footer_asideItem a:hover {
+    color: #fff;
+    opacity: 1;
+}
+
+.st-footer_pMark img {
+    height: 44px;
+    width: auto;
+    opacity: 0.7;
+}
+
+.st-footer_asideCopy {
+    display: none;
+}
+
+/* =====================================================
+   レスポンシブ
+   ===================================================== */
+@media (max-width: 900px) {
+    .price__list--static {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .price-section-title {
+        font-size: 15px;
+        padding: 14px 20px;
+    }
+
+    .price__list--static .price__list__box {
+        padding: 24px;
+    }
+
+    .price__list--static .price__list__box h2 {
+        font-size: 15px;
+    }
+
+    .price__category {
+        border: none;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .price__category li {
+        border: 1px solid #ddd;
+        padding: 12px 20px;
+        font-size: 13px;
+    }
+
+    .price__category li:last-child {
+        border-right: 1px solid #ddd;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-topArea {
+        padding: 50px 20px 45px;
+    }
+
+    .page-topArea_title {
+        font-size: 28px;
+    }
+
+    #pricePageArea .sectionTtl {
+        font-size: 22px;
+    }
+
+    #pricePageArea > p {
+        font-size: 14px;
+    }
+
+    #contactButtonArea {
+        padding: 50px 20px !important;
+    }
+
+    #contactButtonArea .contactButtons {
+        flex-direction: column !important;
+        gap: 16px !important;
+    }
+
+    #contactButtonArea .contactButton__box,
+    #contactButtonArea .contactButton__box--left,
+    #contactButtonArea .contactButton__box--right {
+        flex: none !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 32px 24px !important;
+    }
+
+    #contactButtonArea .contactButton__box h3 {
+        font-size: 17px !important;
+    }
+
+    .st-footer_inner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+        padding: 40px 20px 30px;
+    }
+
+    .st-footer_nav ul {
+        justify-content: center;
+    }
+
+    .st-footer_company {
+        order: -1;
+    }
+
+    .st-footer_companySns {
+        justify-content: center;
+    }
+
+    .st-footer_external {
+        justify-content: center;
+    }
+
+    .st-footer_asideLink {
+        display: none;
+    }
+
+    .st-footer_asideCopy {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-topArea_title {
+        font-size: 24px;
+    }
+
+    .price__category li {
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+
+    .price__list--static .price__list__box {
+        padding: 20px;
+    }
+
+    .price__list--static dd span {
+        font-size: 24px;
+    }
+
+    #contactButtonArea .contactButton__box {
+        padding: 28px 20px !important;
+    }
+
+    #contactButtonArea .contactButton__icon--siryo,
+    #contactButtonArea .contactButton__icon--contact {
+        width: 56px !important;
+        height: 56px !important;
+    }
+}

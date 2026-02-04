@@ -1,0 +1,25 @@
+/* 静的表示用 - 全ての料金事例を表示 */
+#animationList li {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: relative !important;
+    transform: none !important;
+}
+
+.price__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.price__list li {
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 300px;
+}
+
+@media (max-width: 768px) {
+    .price__list li {
+        flex: 1 1 100%;
+    }
+}
