@@ -69,5 +69,63 @@ $(function(){
   });
 
 
+//==================== ハンバーガーメニュー ====================
+$(function(){
+    const hamburger = $('#hamburger');
+    const navMenu = $('#nav-menu');
+    const navOverlay = $('#nav-overlay');
+
+    // ハンバーガーボタンクリック
+    hamburger.click(function(){
+        $(this).toggleClass('active');
+        navMenu.toggleClass('active');
+        navOverlay.toggleClass('active');
+
+        // アクセシビリティ対応
+        const isExpanded = $(this).hasClass('active');
+        $(this).attr('aria-expanded', isExpanded);
+        $(this).attr('aria-label', isExpanded ? 'メニューを閉じる' : 'メニューを開く');
+
+        // スクロール防止
+        if(isExpanded) {
+            $('body').css('overflow', 'hidden');
+        } else {
+            $('body').css('overflow', '');
+        }
+    });
+
+    // オーバーレイクリックで閉じる
+    navOverlay.click(function(){
+        hamburger.removeClass('active');
+        navMenu.removeClass('active');
+        navOverlay.removeClass('active');
+        hamburger.attr('aria-expanded', 'false');
+        hamburger.attr('aria-label', 'メニューを開く');
+        $('body').css('overflow', '');
+    });
+
+    // ナビリンククリックで閉じる
+    navMenu.find('a').click(function(){
+        hamburger.removeClass('active');
+        navMenu.removeClass('active');
+        navOverlay.removeClass('active');
+        hamburger.attr('aria-expanded', 'false');
+        hamburger.attr('aria-label', 'メニューを開く');
+        $('body').css('overflow', '');
+    });
+});
 
 
+//==================== フォーカススタイル改善 ====================
+// キーボード操作時のみフォーカスリングを表示
+document.addEventListener('DOMContentLoaded', function() {
+    document.body.addEventListener('keydown', function(e) {
+        if (e.key === 'Tab') {
+            document.body.classList.add('keyboard-nav');
+        }
+    });
+
+    document.body.addEventListener('mousedown', function() {
+        document.body.classList.remove('keyboard-nav');
+    });
+});
