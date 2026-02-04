@@ -42,7 +42,7 @@ CSS information
 
 .pageArea h2 {
   margin-bottom: 15px;
-  color: #00ABDC;
+  color: #0066CC;
 }
 
 @media only screen and (max-width: 769px) {
@@ -54,7 +54,7 @@ CSS information
 .pageArea h2.sml {
   margin-bottom: 15px;
   font-size: 24px;
-  color: #00ABDC;
+  color: #0066CC;
 }
 
 @media only screen and (max-width: 769px) {
@@ -194,7 +194,7 @@ CSS information
 .moreButton {
   margin: 0 auto;
   background-color: #F3FF5A;
-  color: #00ABDC;
+  color: #0066CC;
   font-weight: bold;
   text-align: center !important;
   border-radius: 30px !important;
@@ -307,7 +307,7 @@ CSS information
 /*-----paperDownloadButton------*/
 .paperDownloadButton {
   margin: 0 auto;
-  background-color: #00ABDC;
+  background-color: #0066CC;
   color: #FFFFFF;
   font-weight: bold;
   text-align: center !important;
@@ -559,7 +559,7 @@ CSS information
 }
 
 .imageArea__bottom {
-  background-color: #00ABDC;
+  background-color: #0066CC;
   padding: 0 30px;
   margin: 0 auto;
   width: 1110px;
@@ -822,7 +822,7 @@ CSS information
 }
 
 .aboutArea__box h3 {
-  color: #00ABDC;
+  color: #0066CC;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
@@ -1124,7 +1124,7 @@ CSS information
 
 .invoiceSoft__box__ttl {
   background-color: #EFFAFD;
-  color: #00ABDC;
+  color: #0066CC;
   display: flex;
   align-items: center;
   padding-left: 35px;
@@ -1303,7 +1303,7 @@ CSS information
 
 .solution__txt h3 {
   font-size: 36px;
-  color: #00ABDC;
+  color: #0066CC;
   font-weight: bold;
   margin-bottom: 30px;
   line-height: 1.4;
@@ -1718,7 +1718,7 @@ CSS information
 
 .merit__txt h3 {
   font-size: 36px;
-  color: #00ABDC;
+  color: #0066CC;
   font-weight: bold;
   margin-bottom: 30px;
   line-height: 1.3;
@@ -2334,7 +2334,7 @@ CSS information
 .case__list h5 {
   font-size: 18px;
   font-weight: bold;
-  color: #00ABDC;
+  color: #0066CC;
   width: 90%;
   margin: 0 auto 10px;
   text-align: center;
@@ -2418,7 +2418,7 @@ CSS information
 .case__list--index h5 {
   font-size: 18px;
   font-weight: bold;
-  color: #00ABDC;
+  color: #0066CC;
   width: 90%;
   margin: 0 auto 10px;
   text-align: center;
@@ -2523,7 +2523,7 @@ CSS information
   text-align: center;
   line-height: 2.0;
   display: block;
-  color: #00ABDC;
+  color: #0066CC;
   transition: all 0.5s ease;
 }
 
@@ -2673,7 +2673,7 @@ CSS information
 }
 
 .contactButton__box:hover {
-  background-color: #00ABDC;
+  background-color: #0066CC;
   transition: all 0.5s ease;
 }
 
@@ -2897,7 +2897,7 @@ CSS information
 
 .newsLoop__date {
   margin: 0 20px;
-  color: #00ABDC;
+  color: #0066CC;
   font-size: 14px;
 }
 
@@ -3001,7 +3001,7 @@ CSS information
   border-radius: 24px;
   font-size: 14px;
   line-height: 2.0;
-  color: #00ABDC;
+  color: #0066CC;
   display: block;
 }
 
@@ -3176,7 +3176,7 @@ CSS information
 .seviceList__box__right h4 {
   padding-top: 40px;
   font-size: 20px;
-  color: #00ABDC;
+  color: #0066CC;
   font-weight: bold;
   margin-bottom: 50px;
 }
@@ -3343,7 +3343,7 @@ CSS information
 
 .strength__box__ttl h2 {
   font-size: 24px;
-  color: #00ABDC;
+  color: #0066CC;
   padding: 0 3% 0 4%;
   box-sizing: border-box;
   width: 87.7%;
@@ -3418,7 +3418,7 @@ CSS information
 .price__category li {
   width: 18%;
   margin-right: 2.5%;
-  color: #00ABDC;
+  color: #0066CC;
   padding-bottom: 10px;
   border-bottom: solid 2px #CBF3FF;
   text-align: center;
@@ -3452,7 +3452,7 @@ CSS information
 .price__category li:hover {
   cursor: pointer;
   font-weight: bold;
-  border-bottom: solid 2px #00ABDC;
+  border-bottom: solid 2px #0066CC;
 }
 
 .price__category__sp {
@@ -3462,7 +3462,7 @@ CSS information
 }
 
 .price__category__sp li {
-  color: #00ABDC;
+  color: #0066CC;
   padding-bottom: 29px;
   border-bottom: solid 2px #CBF3FF;
   text-align: center;
@@ -3484,7 +3484,7 @@ CSS information
 
 .active.alpha {
   font-weight: bold;
-  border-bottom: solid 2px #00ABDC;
+  border-bottom: solid 2px #0066CC;
 }
 
 .price__list {
@@ -3533,7 +3533,7 @@ CSS information
   font-weight: bold;
   text-align: center;
   margin-bottom: 15px;
-  color: #00ABDC;
+  color: #0066CC;
   line-height: 1.8;
   height: 72px;
 }
@@ -3605,7 +3605,7 @@ CSS information
   border-radius: 24px;
   line-height: 1.95;
   background-color: #fff;
-  color: #00ABDC;
+  color: #0066CC;
   font-size: 12px;
   text-align: center;
   font-weight: bold;
@@ -3663,7 +3663,7 @@ CSS information
 
 .price__list dd span {
   font-size: 40px;
-  color: #00ABDC;
+  color: #0066CC;
 }
 
 @media only screen and (min-width: 770px) and (max-width: 1129px) {
@@ -4115,7 +4115,7 @@ img+.single__topImg__txt {
   line-height: 1.8;
   margin-bottom: 20px;
   padding-left: 30px;
-  color: #00ABDC;
+  color: #0066CC;
   position: relative;
 }
 
@@ -4261,7 +4261,7 @@ img+.single__topImg__txt {
 }
 
 #relatedArticleArea h2 {
-  color: #00ABDC;
+  color: #0066CC;
   margin-bottom: 40px;
 }
 
@@ -4320,14 +4320,14 @@ img+.single__topImg__txt {
 }
 
 .company__detail h2 {
-  color: #00ABDC;
+  color: #0066CC;
 }
 
 .company__detail dt {
   width: 33.3%;
   padding: 17px 0 15px 155px;
   border-bottom: solid 1px #F0F0F0;
-  color: #00ABDC;
+  color: #0066CC;
   font-weight: bold;
   font-size: 16px;
   box-sizing: border-box;
@@ -4371,7 +4371,7 @@ img+.single__topImg__txt {
 }
 
 .company__mail {
-  color: #00ABDC;
+  color: #0066CC;
 }
 
 #companyDetailArea {
@@ -4559,7 +4559,7 @@ img+.single__topImg__txt {
 }
 
 .companyMessage__box h3 {
-  color: #00ABDC;
+  color: #0066CC;
   font-size: 18px;
   font-weight: bold;
   text-align: right;
@@ -4619,7 +4619,7 @@ img+.single__topImg__txt {
 .paper__img h3 {
   font-size: 24px;
   font-weight: bold;
-  color: #00ABDC;
+  color: #0066CC;
   text-align: center;
   margin-bottom: 25px;
 }
@@ -4747,7 +4747,7 @@ img+.single__topImg__txt {
 
 .contact__item {
   font-size: 16px;
-  color: #00ABDC;
+  color: #0066CC;
   margin-bottom: 8px;
 }
 

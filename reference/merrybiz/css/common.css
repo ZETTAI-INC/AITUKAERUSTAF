@@ -125,11 +125,11 @@ body {
     font-size: 16px;
     border: none; }
   .wp-pagenavi a:hover {
-    color: #00ABDC !important;
+    color: #0066CC !important;
     transition: all 0.5s ease;
     opacity: 1.0; }
   .wp-pagenavi .current {
-    color: #00ABDC !important;
+    color: #0066CC !important;
     font-weight: normal !important; }
 
 .nextpostslink {
@@ -438,7 +438,7 @@ body {
 
 .tel__box {
   box-sizing: border-box;
-  border: solid 1px #00ABDC;
+  border: solid 1px #0066CC;
   border-radius: 7px;
   padding: 10px 0;
   text-align: center;
@@ -465,7 +465,7 @@ body {
   margin: 6px 0 2px;
   line-height: 1.0; }
   .tel__number a {
-    color: #00ABDC;
+    color: #0066CC;
     font-size: 20px;
     font-weight: bold; }
     @media only screen and (min-width: 770px) and (max-width: 1129px) {
@@ -481,5 +481,5 @@ body {
   font-size: 10px;
   text-align: center;
   padding-top: 5px;
-  background-color: #00ABDC;
+  background-color: #0066CC;
   color: #fff; }
