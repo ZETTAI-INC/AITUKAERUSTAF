@@ -2016,7 +2016,7 @@ sec10
 sec11
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #sec11 {
-    background-image: url(../img/sec11-bg-dummy.jpg);
+    background-image: url(../img/sec11-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
@@ -2072,35 +2072,62 @@ sec11
 form
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #form {
-    background-color: var(--black);
+    background: linear-gradient(135deg, #003366 0%, #0066CC 100%);
     text-align: center;
     padding: 120px 15px 10px;
     border-radius: 50px 50px 0 0;
     margin-top: -40px;
+    position: relative;
 }
 
+#form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+    border-radius: 50px 50px 0 0;
+}
 
 #form .box {
-    /*max-width: 800px;*/
     margin: 0 auto;
     background-color: var(--white);
-    border-radius: 6px;
+    border-radius: 16px;
     margin-bottom: 80px;
-    /*padding-top: 50px;*/
     max-width: 650px;
     padding-top: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+#form .box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #00BCD4 0%, #0066CC 50%, #003366 100%);
 }
 
 #form h2 {
     font-size: var(--36px);
     color: var(--white);
+    position: relative;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 #form p {
-    color: var(--blue);
-    font-size: var(--22px);
-    font-weight: bold;
+    color: #fff;
+    font-size: var(--20px);
+    font-weight: 500;
     margin-bottom: 40px;
+    opacity: 0.95;
+    position: relative;
 }
 
 #form iframe {
@@ -2173,26 +2200,37 @@ iframe .v-text-field.v-text-field--enclosed .v-text-field__details {
     font-weight: 400;
 }
 
+#form .box-fix label {
+    display: flex;
+    align-items: center;
+    font-size: var(--15px);
+    font-weight: 600;
+    color: #2F363D;
+    margin-bottom: 10px;
+}
+
 #form .box-fix .hissu {
     color: var(--white);
     font-size: var(--12px);
-    background-color: red;
-    padding: 2px 5px 3px;
+    background: linear-gradient(135deg, #0066CC 0%, #003366 100%);
+    padding: 4px 10px;
     line-height: 1;
-    border-radius: 3px;
+    border-radius: 20px;
     white-space: nowrap;
-    margin-right: 7px;
+    margin-right: 10px;
+    font-weight: 600;
 }
 
 #form .box-fix .nini {
     color: var(--white);
     font-size: var(--12px);
-    background-color: #999;
-    padding: 2px 5px 3px;
+    background-color: #AEBAC6;
+    padding: 4px 10px;
     line-height: 1;
-    border-radius: 3px;
+    border-radius: 20px;
     white-space: nowrap;
-    margin-right: 7px;
+    margin-right: 10px;
+    font-weight: 600;
 }
 
 #form .box-fix div {
@@ -2201,54 +2239,103 @@ iframe .v-text-field.v-text-field--enclosed .v-text-field__details {
 
 
 #form .box-fix div input {
-    background-color: #f0f0f0;
-    border: solid 0px #999;
-    border-width: 0px 0px 2px;
-    border-radius: 3px 3px 0 0;
+    background-color: #F0F5FA;
+    border: 2px solid #e0e5eb;
+    border-radius: 8px;
     font-size: var(--16px);
-    padding: 15px;
+    padding: 16px;
     width: 100%;
+    transition: all 0.3s ease;
 }
 
+#form .box-fix div input:focus {
+    outline: none;
+    border-color: #0066CC;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.1);
+}
 
 #form .box-fix div select {
-    background-color: #f0f0f0;
-    border: solid 0px #999;
-    border-width: 0px 0px 2px;
-    border-radius: 3px 3px 0 0;
+    background-color: #F0F5FA;
+    border: 2px solid #e0e5eb;
+    border-radius: 8px;
     font-size: var(--16px);
-    padding: 15px 15px 15px 15px;
+    padding: 16px;
     width: 100%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#form .box-fix div select:focus {
+    outline: none;
+    border-color: #0066CC;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.1);
+}
+
+#form .box-fix div .d-flex {
+    align-items: center;
+    padding: 12px 20px;
+    background: #F0F5FA;
+    border-radius: 8px;
+    margin-bottom: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#form .box-fix div .d-flex:hover {
+    background: #e8f0f8;
 }
 
 #form .box-fix div .d-flex input {
-    transform: scale(0.6);
-    margin-right: 7px;
-    width: 30px;
+    transform: scale(1.2);
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+    accent-color: #0066CC;
 }
 
 #form .box-fix textarea {
-    border: solid 1px #ccc;
-    padding: 20px;
-    line-height: 1.5;
+    background-color: #F0F5FA;
+    border: 2px solid #e0e5eb;
+    border-radius: 8px;
+    padding: 16px;
+    line-height: 1.6;
     width: 100%;
     min-height: 170px;
+    font-size: var(--16px);
+    transition: all 0.3s ease;
+    resize: vertical;
+}
+
+#form .box-fix textarea:focus {
+    outline: none;
+    border-color: #0066CC;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.1);
 }
 
 #form .box-fix .kiyaku {
-    border: solid 1px #ccc;
+    border: 2px solid #e0e5eb;
+    border-radius: 8px;
     padding: 20px;
-    max-height: 320px;
-    overflow: scroll;
+    max-height: 280px;
+    overflow-y: auto;
+    background: #fafbfc;
 }
 
 #form .box-fix .kiyaku::-webkit-scrollbar-thumb {
-    background: #ccc;
+    background: #0066CC;
     border-radius: 5px;
 }
 
 #form .box-fix .kiyaku::-webkit-scrollbar {
-    width: 7px;
+    width: 8px;
+}
+
+#form .box-fix .kiyaku::-webkit-scrollbar-track {
+    background: #e0e5eb;
+    border-radius: 5px;
 }
 
 #form .box-fix .kiyaku p {
@@ -2286,22 +2373,33 @@ iframe .v-text-field.v-text-field--enclosed .v-text-field__details {
 }
 
 #form .box-fix #submit {
-    background-color: var(--blue);
+    background: linear-gradient(135deg, #0066CC 0%, #003366 100%);
     color: var(--white);
     font-size: var(--18px);
-    border: solid 0px;
-    padding: 12px;
+    border: none;
+    padding: 18px 40px;
     letter-spacing: 0.08rem;
-    border-radius: 50px;
-    margin-top: 15px;
+    border-radius: 70px;
+    margin-top: 20px;
     width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+    font-weight: 700;
+}
+
+#form .box-fix #submit:hover {
+    background: linear-gradient(135deg, #004A99 0%, #002244 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
 }
 
 #form .box-fix .error {
-    color: red;
+    color: #e53935;
     font-size: 13px;
     display: block;
-    margin: 5px 0 0;
+    margin: 8px 0 0;
+    font-weight: 500;
 }
 
 #form .box-fix .trial-error {
@@ -2319,34 +2417,58 @@ iframe .v-text-field.v-text-field--enclosed .v-text-field__details {
 
 #form .confirm .lead {
     text-align: center;
-    color: red;
+    color: #0066CC;
     margin-bottom: 40px;
+    font-weight: 600;
 }
 
-#form .confirm .btn-default {
-    background-color: #999 !important;
+#form .confirm .btn-default,
+#form .confirm .btn-back {
+    background: #AEBAC6 !important;
     color: var(--white);
-    font-size: var(--18px);
-    border: solid 0px;
-    padding: 12px;
+    font-size: var(--16px);
+    border: none;
+    padding: 16px;
     letter-spacing: 0.08rem;
-    border-radius: 50px;
+    border-radius: 70px;
     width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#form .confirm .btn-default:hover,
+#form .confirm .btn-back:hover {
+    background: #8a9aab !important;
 }
 
 #form .confirm .btn-default:after {
     background-image: none;
 }
 
-#form .confirm .btn {
-    background-color: var(--blue);
+#form .confirm .btn,
+#form .confirm button[type="submit"] {
+    background: linear-gradient(135deg, #0066CC 0%, #003366 100%);
     color: var(--white);
     font-size: var(--18px);
-    border: solid 0px;
-    padding: 12px;
+    border: none;
+    padding: 18px;
     letter-spacing: 0.08rem;
-    border-radius: 50px;
+    border-radius: 70px;
     width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+    font-weight: 700;
+}
+
+#form .confirm .btn:hover,
+#form .confirm button[type="submit"]:hover {
+    background: linear-gradient(135deg, #004A99 0%, #002244 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
 }
 
 #form .confirm .btn:after {
@@ -3822,7 +3944,7 @@ Footer
     #sec11 {
         padding: 60px 0px 200px;
         background-color: #A8CCFF;
-        background-image: url(../img/sec11-bg-sp-dummy.jpg);
+        background-image: url(../img/sec11-bg-sp.png);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: bottom center;
@@ -4024,5 +4146,89 @@ Footer
 
     #form .tel {
         font-size: var(--28px);
+    }
+
+    /* voice tabs responsive */
+    .voice-tabs {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .voice-tab {
+        padding: 10px 16px;
+        font-size: var(--14px);
+    }
+}
+
+
+/*    ––––––––––––––––––––––––––––––––––––––––––––––––––
+VOICE タブ切り替え
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.voice-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.voice-tab {
+    padding: 12px 24px;
+    border: 2px solid var(--blue);
+    background-color: var(--white);
+    color: var(--blue);
+    border-radius: 50px;
+    font-size: var(--16px);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.voice-tab:hover {
+    background-color: var(--lightblue);
+}
+
+.voice-tab.active {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.voice-cards {
+    position: relative;
+}
+
+.voice-card {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.voice-card.hidden {
+    display: none !important;
+}
+
+.scale-badge {
+    display: inline-block;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: var(--12px);
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+    .voice-tabs {
+        gap: 8px;
+        padding: 0 10px;
+    }
+
+    .voice-tab {
+        padding: 8px 14px;
+        font-size: var(--12px);
+    }
+
+    .scale-badge {
+        font-size: var(--10px);
+        padding: 3px 10px;
     }
 }
