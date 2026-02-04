@@ -107,7 +107,7 @@ const MainLayout: React.FC = () => {
     { type: 'divider' },
     {
       key: 'all',
-      label: <Text type="link">すべての通知を見る</Text>,
+      label: <Text style={{ color: '#1890ff' }}>すべての通知を見る</Text>,
       onClick: () => navigate('/notifications'),
     }
   );

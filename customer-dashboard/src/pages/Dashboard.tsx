@@ -17,7 +17,6 @@ import {
   Steps,
   Alert,
   Skeleton,
-  Descriptions,
   Timeline,
   Divider,
   FloatButton,
@@ -37,7 +36,6 @@ import {
   ThunderboltOutlined,
   CalendarOutlined,
   ArrowUpOutlined,
-  StarFilled,
   BellOutlined,
   QuestionCircleOutlined,
   CustomerServiceOutlined,
@@ -58,7 +56,6 @@ import {
   mockUser,
   categoryLabels,
   statusLabels,
-  mockDepartments,
   mockDepartmentStats,
   getDepartmentById,
 } from '../mock/data';

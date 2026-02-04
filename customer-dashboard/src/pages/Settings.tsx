@@ -9,7 +9,6 @@ import {
   Divider,
   Space,
   Avatar,
-  Upload,
   message,
   Row,
   Col,
@@ -20,7 +19,6 @@ import {
   Modal,
   Alert,
   List,
-  Popconfirm,
   Select,
   Radio,
   Slider,
@@ -28,7 +26,6 @@ import {
   Timeline,
   Descriptions,
   Result,
-  Collapse,
 } from 'antd';
 import {
   UserOutlined,
@@ -37,16 +34,13 @@ import {
   BankOutlined,
   BellOutlined,
   LockOutlined,
-  UploadOutlined,
   SafetyOutlined,
   GlobalOutlined,
   SettingOutlined,
   CheckCircleOutlined,
-  CloseCircleOutlined,
   ExclamationCircleOutlined,
   MobileOutlined,
   DesktopOutlined,
-  ClockCircleOutlined,
   EditOutlined,
   DeleteOutlined,
   CameraOutlined,
@@ -506,7 +500,7 @@ const Settings: React.FC = () => {
                       <Space>
                         {log.device.includes('iPhone') ? <MobileOutlined /> : <DesktopOutlined />}
                         <Text strong>{log.device}</Text>
-                        {log.current && <Tag color="green" size="small">現在</Tag>}
+                        {log.current && <Tag color="green" style={{ fontSize: 11 }}>現在</Tag>}
                       </Space>
                       <br />
                       <Text type="secondary" style={{ fontSize: 12 }}>

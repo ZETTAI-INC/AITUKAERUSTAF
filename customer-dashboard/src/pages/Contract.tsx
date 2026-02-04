@@ -24,8 +24,6 @@ import {
   Tabs,
   List,
   Avatar,
-  Skeleton,
-  Empty,
   Segmented,
 } from 'antd';
 import {
@@ -100,7 +98,7 @@ const Contract: React.FC = () => {
       title: '',
       key: 'action',
       width: 120,
-      render: (_, record) => (
+      render: () => (
         <Tooltip title="請求書をダウンロード">
           <Button
             type="link"
