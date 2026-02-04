@@ -1,0 +1,25 @@
+/*
+ * Pricing React Component Styles
+ * Scoped to avoid affecting the parent page
+ */
+
+#pricing-react-root {
+  /* Reset any inherited styles */
+  font-family: "Noto Sans JP", system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  color: #0F172A;
+  background-color: transparent;
+}
+
+#pricing-react-root * {
+  box-sizing: border-box;
+}
+
+#pricing-react-root a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#pricing-react-root a:hover {
+  color: inherit;
+}

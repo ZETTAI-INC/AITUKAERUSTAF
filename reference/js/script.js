@@ -104,7 +104,7 @@ $(function(){
         $('body').css('overflow', '');
     });
 
-    // ナビリンククリックで閉じる
+    // ナビリンククリックで閉じる（ドロップダウンボタン以外）
     navMenu.find('a').click(function(){
         hamburger.removeClass('active');
         navMenu.removeClass('active');
@@ -112,6 +112,35 @@ $(function(){
         hamburger.attr('aria-expanded', 'false');
         hamburger.attr('aria-label', 'メニューを開く');
         $('body').css('overflow', '');
+    });
+
+    // ナビゲーションドロップダウン（モバイル）
+    $('.nav-dropdown-btn').click(function(e){
+        e.preventDefault();
+        const parent = $(this).parent('.has-dropdown');
+        const isExpanded = parent.hasClass('open');
+
+        // 他のドロップダウンを閉じる
+        $('.has-dropdown').not(parent).removeClass('open');
+        $('.nav-dropdown-btn').not(this).attr('aria-expanded', 'false');
+
+        // 現在のドロップダウンをトグル
+        parent.toggleClass('open');
+        $(this).attr('aria-expanded', !isExpanded);
+    });
+
+    // トップバードロップダウン
+    $('.topbar-dropdown-btn').click(function(e){
+        e.preventDefault();
+        const isExpanded = $(this).attr('aria-expanded') === 'true';
+        $(this).attr('aria-expanded', !isExpanded);
+    });
+
+    // ドロップダウン外クリックで閉じる
+    $(document).click(function(e){
+        if(!$(e.target).closest('.topbar-dropdown').length){
+            $('.topbar-dropdown-btn').attr('aria-expanded', 'false');
+        }
     });
 });
 
@@ -127,5 +156,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.body.addEventListener('mousedown', function() {
         document.body.classList.remove('keyboard-nav');
+    });
+});
+
+
+//==================== VOICEセクション タブ切り替え ====================
+$(function() {
+    const tabs = $('.voice-tab');
+    const cards = $('.voice-card');
+
+    tabs.on('click', function() {
+        const filter = $(this).data('filter');
+
+        // タブのアクティブ状態を更新
+        tabs.removeClass('active');
+        $(this).addClass('active');
+
+        // カードのフィルタリング
+        cards.each(function() {
+            const cardScale = $(this).data('scale');
+
+            if (filter === 'all' || cardScale === filter) {
+                $(this).removeClass('hidden');
+                $(this).css({
+                    'opacity': '1',
+                    'transform': 'translateY(0)'
+                });
+            } else {
+                $(this).addClass('hidden');
+            }
+        });
     });
 });
