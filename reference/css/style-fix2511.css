@@ -1,22 +1,27 @@
 @charset "UTF-8";
 
 /*    ––––––––––––––––––––––––––––––––––––––––––––––––––
-MARK: ヘッダー
+MARK: ヘッダー (MerryBiz Style)
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-header {
+header.merrybiz-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(5px);
-    border-bottom: 3px solid #4EAEFF;
     z-index: 9999;
-    padding: 10px 0;
-    box-shadow: 0 2px 10px rgba(0, 102, 204, 0.1);
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 102, 204, 0.08);
 }
 
-header .container {
+/* トップバー */
+.header-topbar {
+    background: #003366;
+    color: #fff;
+    font-size: 12px;
+    padding: 6px 0;
+}
+
+.header-topbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,21 +30,289 @@ header .container {
     padding: 0 20px;
 }
 
-header .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--blue);
+.topbar-left,
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.topbar-link {
+    color: #fff;
     text-decoration: none;
-    font-family: "Noto Sans JP", sans-serif;
+    transition: opacity 0.3s ease;
 }
 
-header .logo:hover {
-    color: var(--darkblue);
+.topbar-link:hover {
+    opacity: 0.8;
+    color: #fff;
 }
 
-header .logo img {
+.topbar-dropdown {
+    position: relative;
+}
+
+.topbar-dropdown-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0;
+}
+
+.topbar-dropdown-btn:hover {
+    opacity: 0.8;
+}
+
+.dropdown-arrow {
+    transition: transform 0.3s ease;
+}
+
+.topbar-dropdown-btn[aria-expanded="true"] .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.topbar-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 180px;
+    padding: 8px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.topbar-dropdown:hover .topbar-dropdown-menu,
+.topbar-dropdown-btn[aria-expanded="true"] + .topbar-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.topbar-dropdown-menu a {
+    display: block;
+    padding: 10px 16px;
+    color: #333;
+    text-decoration: none;
+    font-size: 13px;
+    transition: background 0.3s ease;
+}
+
+.topbar-dropdown-menu a:hover {
+    background: #f5f5f5;
+    color: var(--blue);
+}
+
+.topbar-tel {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.topbar-tel:hover {
+    color: #fff;
+    opacity: 0.8;
+}
+
+.topbar-tel svg {
+    flex-shrink: 0;
+}
+
+.tel-time {
+    font-weight: 400;
+    font-size: 11px;
+    opacity: 0.9;
+}
+
+/* メインヘッダー */
+.header-main {
+    padding: 12px 0;
+    border-bottom: 3px solid #4EAEFF;
+}
+
+.header-main .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-main .logo {
+    text-decoration: none;
+}
+
+.header-main .logo-img {
     height: 40px;
     width: auto;
+}
+
+/* ロゴテキスト */
+.header-main .logo-text {
+    font-family: 'DM Sans', 'Noto Sans JP', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #003366;
+    text-decoration: none;
+}
+
+.header-main .logo-text .logo-ai {
+    color: #0066CC;
+    font-weight: 800;
+}
+
+/* メインナビゲーション */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list > li {
+    position: relative;
+}
+
+.nav-list > li > a,
+.nav-dropdown-btn {
+    color: #2F363D;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 0;
+}
+
+.nav-list > li > a:hover,
+.nav-dropdown-btn:hover {
+    color: var(--blue);
+}
+
+.nav-dropdown-btn[aria-expanded="true"] .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* ナビゲーションドロップダウン */
+.nav-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    min-width: 160px;
+    padding: 12px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.has-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown-btn[aria-expanded="true"] + .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-dropdown-menu a:hover {
+    background: #f0f7ff;
+    color: var(--blue);
+}
+
+/* CTAボタン */
+.nav-cta-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-cta .cta-icon {
+    display: flex;
+    align-items: center;
+}
+
+.nav-cta-document {
+    background: #fff;
+    color: var(--blue);
+    border: 2px solid var(--blue);
+}
+
+.nav-cta-document:hover {
+    background: var(--blue);
+    color: #fff;
+}
+
+.nav-cta-document:hover svg path,
+.nav-cta-document:hover svg line,
+.nav-cta-document:hover svg polyline {
+    stroke: #fff;
+}
+
+.nav-cta-contact {
+    background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+    color: #fff;
+    border: 2px solid transparent;
+}
+
+.nav-cta-contact:hover {
+    background: linear-gradient(135deg, #E55A2B 0%, #FF7A30 100%);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35);
 }
 
 /* ハンバーガーメニュー（PC非表示） */
@@ -70,42 +343,9 @@ textarea:focus {
     outline: none;
 }
 
-header nav {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-header nav a {
-    color: #2F363D;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 14px;
-    transition: color 0.3s ease;
-}
-
-header nav a:hover {
-    color: #0066CC;
-}
-
-header .header-cta {
-    background: linear-gradient(90deg, #4EAEFF 0%, #0066CC 100%);
-    color: #FFFFFF !important;
-    padding: 10px 24px;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-header .header-cta:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
-    color: #FFFFFF;
-}
-
 /* ヘッダー分のpadding調整 */
 body {
-    padding-top: 65px;
+    padding-top: 100px;
 }
 
 /* Remove vignette/blur overlays */
@@ -120,17 +360,56 @@ html::after {
     display: none !important;
 }
 
+/* タブレット対応 */
+@media screen and (max-width: 1024px) {
+    .nav-list {
+        gap: 16px;
+    }
+
+    .nav-cta {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+}
+
+/* モバイル対応 */
 @media screen and (max-width: 768px) {
-    header {
+    /* トップバー */
+    .header-topbar {
         padding: 8px 0;
     }
 
-    header .logo {
-        font-size: 20px;
+    .header-topbar .container {
+        flex-direction: column;
+        gap: 8px;
     }
 
-    header .logo img {
-        height: 30px;
+    .topbar-left,
+    .topbar-right {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .topbar-dropdown {
+        display: none;
+    }
+
+    .topbar-tel {
+        font-size: 13px;
+    }
+
+    .tel-time {
+        display: none;
+    }
+
+    /* メインヘッダー */
+    .header-main {
+        padding: 10px 0;
+    }
+
+    .header-main .logo-img {
+        height: 32px;
     }
 
     /* ハンバーガーメニュー */
@@ -138,8 +417,8 @@ html::after {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 30px;
-        height: 22px;
+        width: 28px;
+        height: 20px;
         background: none;
         border: none;
         cursor: pointer;
@@ -157,7 +436,7 @@ html::after {
     }
 
     .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 6px);
+        transform: rotate(45deg) translate(5px, 5px);
     }
 
     .hamburger.active span:nth-child(2) {
@@ -165,51 +444,91 @@ html::after {
     }
 
     .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
+        transform: rotate(-45deg) translate(5px, -5px);
     }
 
-    header nav {
+    /* モバイルナビゲーション */
+    .main-nav {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 80%;
-        max-width: 300px;
+        width: 85%;
+        max-width: 320px;
         height: 100vh;
-        background: linear-gradient(135deg, #0066CC 0%, #4EAEFF 100%);
+        background: #fff;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: stretch;
         gap: 0;
-        padding: 80px 20px 40px;
+        padding: 80px 0 40px;
         transition: 0.3s ease;
         z-index: 10000;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
+        overflow-y: auto;
     }
 
-    header nav.active {
+    .main-nav.active {
         right: 0;
     }
 
-    header nav a {
-        color: #fff !important;
-        font-size: 18px;
-        padding: 20px 0;
+    .nav-list {
+        flex-direction: column;
+        gap: 0;
         width: 100%;
-        text-align: center;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    header nav a:hover {
-        background-color: rgba(255, 255, 255, 0.1);
+    .nav-list > li {
+        border-bottom: 1px solid #eee;
     }
 
-    header nav .header-cta {
-        background: #FFD700 !important;
-        color: var(--blue) !important;
-        border-radius: 30px;
-        margin-top: 20px;
-        padding: 15px 30px;
-        border-bottom: none;
+    .nav-list > li > a,
+    .nav-dropdown-btn {
+        padding: 16px 24px;
+        width: 100%;
+        font-size: 15px;
+        justify-content: space-between;
+    }
+
+    .nav-list > li > a:hover,
+    .nav-dropdown-btn:hover {
+        background: #f5f9ff;
+    }
+
+    /* モバイルドロップダウン */
+    .nav-dropdown-menu {
+        position: static;
+        transform: none;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+        background: #f8fafc;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 1;
+        visibility: visible;
+        transition: max-height 0.3s ease;
+    }
+
+    .has-dropdown.open .nav-dropdown-menu {
+        max-height: 200px;
+    }
+
+    .nav-dropdown-menu a {
+        padding: 14px 24px 14px 40px;
+        border-bottom: 1px solid #eee;
+    }
+
+    /* CTAボタン（モバイル） */
+    .nav-cta-buttons {
+        flex-direction: column;
+        padding: 24px;
+        gap: 12px;
+    }
+
+    .nav-cta {
+        justify-content: center;
+        padding: 14px 20px;
+        font-size: 14px;
     }
 
     /* オーバーレイ */
@@ -231,21 +550,28 @@ html::after {
         visibility: visible;
     }
 
-    header nav {
-        gap: 15px;
+    body {
+        padding-top: 90px;
     }
+}
 
-    header nav a:not(.header-cta) {
+/* 小さいモバイル */
+@media screen and (max-width: 480px) {
+    .topbar-left {
         display: none;
     }
 
-    header .header-cta {
-        padding: 8px 16px;
-        font-size: 12px;
+    .topbar-right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .header-main .logo-img {
+        height: 28px;
     }
 
     body {
-        padding-top: 55px;
+        padding-top: 75px;
     }
 }
 
