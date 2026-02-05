@@ -94,6 +94,11 @@
       max-width: 100%;
     }
 
+    .pg-left__list {
+      width: 860px;
+      margin: 0 auto;
+    }
+
     .pg-right {
       display: none;
     }
@@ -104,45 +109,48 @@
       margin-bottom: 4px;
     }
 
-    /* テーブル全体の固定幅 */
+    /* テーブル全体の固定幅 - 5列構成で統一 */
     .pg-left__list .table-head,
     .pg-left__list .table-child {
-      table-layout: fixed;
-      width: 100%;
-      max-width: 900px;
+      table-layout: fixed !important;
+      width: 860px !important;
+      max-width: 860px !important;
+      border-collapse: collapse !important;
+      margin: 0 auto;
     }
 
-    /* 列幅の統一（5列構成：カテゴリ60px + タイトル180px + プラン3列各200px） */
-    .pg-left__list .table-head,
-    .pg-left__list .table-child {
-      table-layout: fixed;
-      width: 100%;
-      max-width: 860px;
-      border-collapse: collapse;
-    }
-
-    .pg-left__list .table-head td[colspan="2"] {
-      width: 260px;
-    }
-
-    .pg-left__list .table-child .td-first {
-      width: 60px;
-      min-width: 60px;
-      max-width: 60px;
-    }
-
-    .pg-left__list .table-child .td-title {
-      width: 200px;
-      min-width: 200px;
-      max-width: 200px;
+    /* ヘッダーテーブル: 左2列(260px) + プラン3列(各200px) = 860px */
+    .pg-left__list .table-head td[colspan="2"],
+    .pg-left__list .table-head td[rowspan="2"][colspan="2"] {
+      width: 260px !important;
+      min-width: 260px !important;
+      max-width: 260px !important;
     }
 
     .pg-left__list .table-head .td-204,
-    .pg-left__list .table-child .td-204,
     .pg-left__list .table-head .td-body {
-      width: 200px;
-      min-width: 200px;
-      max-width: 200px;
+      width: 200px !important;
+      min-width: 200px !important;
+      max-width: 200px !important;
+    }
+
+    /* ボディテーブル: カテゴリ(60px) + タイトル(200px) + プラン3列(各200px) = 860px */
+    .pg-left__list .table-child .td-first {
+      width: 60px !important;
+      min-width: 60px !important;
+      max-width: 60px !important;
+    }
+
+    .pg-left__list .table-child .td-title {
+      width: 200px !important;
+      min-width: 200px !important;
+      max-width: 200px !important;
+    }
+
+    .pg-left__list .table-child .td-204 {
+      width: 200px !important;
+      min-width: 200px !important;
+      max-width: 200px !important;
     }
   </style>
 </head>
