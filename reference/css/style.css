@@ -1656,20 +1656,20 @@ sec07
     border: solid 1px var(--bluegray);
     color: var(--white);
     font-family: 500;
-    font-size: var(--20px);
-    padding: 15px;
+    font-size: var(--16px);
+    padding: 10px;
 }
 
 #sec07 table td {
     border: solid 1px var(--bluegray);
-    padding: 25px 15px;
+    padding: 15px 10px;
     font-weight: bold;
-    font-size: var(--22px);
+    font-size: var(--16px);
 }
 
 #sec07 table td .en {
-    font-size: var(--40px);
-    letter-spacing: 0.2rem;
+    font-size: var(--28px);
+    letter-spacing: 0.1rem;
 }
 
 #sec07 table th,
@@ -1724,13 +1724,13 @@ sec07
 }
 
 #sec07 .js-scrollable {
-    max-width: 1140px;
+    max-width: 960px;
     margin: 0 auto;
 }
 
 
 #sec07 .js-scrollable thead th {
-    font-size: var(--20px);
+    font-size: var(--16px);
     line-height: 1.2;
 }
 
@@ -1745,12 +1745,12 @@ sec07
 
 #sec07 .js-scrollable thead .ai {
     background-color: var(--blue);
-    border: solid 6px var(--blue);
-    width: 30%;
+    border: solid 4px var(--blue);
+    width: 22%;
 }
 
 #sec07 .js-scrollable thead .ai img {
-    width: 180px;
+    width: 120px;
 }
 
 #sec07 .js-scrollable tbody td:first-child {
@@ -1765,33 +1765,33 @@ sec07
 }
 
 #sec07 .js-scrollable tbody td img {
-    margin-bottom: 5px;
-    width: 50px;
+    margin-bottom: 3px;
+    width: 36px;
 }
 
 #sec07 .js-scrollable tbody td {
-    font-size: var(--16px);
+    font-size: var(--14px);
     font-weight: 500;
 }
 
 #sec07 .js-scrollable tbody .cost td {
-    font-size: var(--22px);
+    font-size: var(--16px);
     font-weight: bold;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
 }
 
 #sec07 .js-scrollable tbody .cost td .en {
-    font-size: var(--40px);
+    font-size: var(--28px);
 }
 
 #sec07 .js-scrollable tbody .ai {
-    border-left: solid 6px var(--blue);
-    border-right: solid 6px var(--blue);
+    border-left: solid 4px var(--blue);
+    border-right: solid 4px var(--blue);
 }
 
 
 #sec07 .js-scrollable tbody tr:last-child .ai {
-    border-bottom: solid 6px var(--blue);
+    border-bottom: solid 4px var(--blue);
 }
 
 
@@ -3797,7 +3797,7 @@ Footer
     }
 
     #sec07 .js-scrollable thead th {
-        font-size: var(--18px);
+        font-size: var(--14px);
     }
 
     #sec07 .js-scrollable tbody td:first-child {
