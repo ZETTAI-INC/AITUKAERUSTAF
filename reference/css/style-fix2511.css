@@ -93,7 +93,7 @@ header.merrybiz-header {
 }
 
 .topbar-dropdown:hover .topbar-dropdown-menu,
-.topbar-dropdown-btn[aria-expanded="true"] + .topbar-dropdown-menu {
+.topbar-dropdown-btn[aria-expanded="true"]+.topbar-dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -193,11 +193,11 @@ header.merrybiz-header {
     padding: 0;
 }
 
-.nav-list > li {
+.nav-list>li {
     position: relative;
 }
 
-.nav-list > li > a,
+.nav-list>li>a,
 .nav-dropdown-btn {
     color: #2F363D;
     text-decoration: none;
@@ -213,7 +213,7 @@ header.merrybiz-header {
     padding: 8px 0;
 }
 
-.nav-list > li > a:hover,
+.nav-list>li>a:hover,
 .nav-dropdown-btn:hover {
     color: var(--blue);
 }
@@ -240,7 +240,7 @@ header.merrybiz-header {
 }
 
 .has-dropdown:hover .nav-dropdown-menu,
-.nav-dropdown-btn[aria-expanded="true"] + .nav-dropdown-menu {
+.nav-dropdown-btn[aria-expanded="true"]+.nav-dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0);
@@ -393,6 +393,7 @@ html::after {
 
 /* モバイル対応 */
 @media screen and (max-width: 768px) {
+
     /* トップバー */
     .header-topbar {
         padding: 8px 0;
@@ -496,11 +497,11 @@ html::after {
         width: 100%;
     }
 
-    .nav-list > li {
+    .nav-list>li {
         border-bottom: 1px solid #eee;
     }
 
-    .nav-list > li > a,
+    .nav-list>li>a,
     .nav-dropdown-btn {
         padding: 16px 24px;
         width: 100%;
@@ -508,7 +509,7 @@ html::after {
         justify-content: space-between;
     }
 
-    .nav-list > li > a:hover,
+    .nav-list>li>a:hover,
     .nav-dropdown-btn:hover {
         background: #f5f9ff;
     }
@@ -809,14 +810,41 @@ MARK: サービス内容ハイライト（AIニュース＆30時間）
     margin: 40px 0;
 }
 
+#sec03 .highlights-wrapper {
+    background-color: #F0F5FA;
+    border-radius: 20px;
+    padding: 70px 20px 40px;
+    margin-top: 80px;
+    position: relative;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sec03 .highlights-wrapper-img {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 600px;
+    z-index: 10;
+}
+
 #sec03 .highlight-card {
     background: #fff;
     border-radius: 12px;
-    padding: 28px 24px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 12px rgba(0, 51, 102, 0.08);
+    padding: 32px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 16px rgba(0, 51, 102, 0.1);
     border: 1px solid #e8f0f8;
-    transition: box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
 }
 
 #sec03 .highlight-card:hover {
@@ -2529,7 +2557,9 @@ MARK: FV
         margin: 30px 0 0 0;
     }
 
-}/* AI Tools Section (Shared) */
+}
+
+/* AI Tools Section (Shared) */
 .price-tools-container {
     background: #fff;
     border: 1px solid #e0e0e0;
