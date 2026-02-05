@@ -113,6 +113,14 @@
     }
 
     /* 列幅の統一（5列構成：カテゴリ60px + タイトル180px + プラン3列各200px） */
+    .pg-left__list .table-head,
+    .pg-left__list .table-child {
+      table-layout: fixed;
+      width: 100%;
+      max-width: 860px;
+      border-collapse: collapse;
+    }
+
     .pg-left__list .table-head td[colspan="2"] {
       width: 260px;
     }
@@ -120,17 +128,21 @@
     .pg-left__list .table-child .td-first {
       width: 60px;
       min-width: 60px;
+      max-width: 60px;
     }
 
     .pg-left__list .table-child .td-title {
       width: 200px;
       min-width: 200px;
+      max-width: 200px;
     }
 
     .pg-left__list .table-head .td-204,
-    .pg-left__list .table-child .td-204 {
+    .pg-left__list .table-child .td-204,
+    .pg-left__list .table-head .td-body {
       width: 200px;
       min-width: 200px;
+      max-width: 200px;
     }
   </style>
 </head>
