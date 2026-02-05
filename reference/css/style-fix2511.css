@@ -824,11 +824,11 @@ MARK: サービス内容ハイライト（AIニュース＆30時間）
 
 #sec03 .highlights-wrapper-img {
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    max-width: 1800px;
+    transform: translate(-50%, -55%);
+    width: 150%;
+    max-width: 1500px;
     z-index: 10;
     pointer-events: none;
 }
