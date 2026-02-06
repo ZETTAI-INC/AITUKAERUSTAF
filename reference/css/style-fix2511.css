@@ -810,6 +810,11 @@ MARK: サービス内容ハイライト（AIニュース＆30時間）
     margin: 40px 0;
 }
 
+#sec03 .service-highlights .row {
+    display: flex;
+    align-items: stretch;
+}
+
 #sec03 .highlights-wrapper {
     background-color: #F0F5FA;
     border-radius: 20px;
@@ -822,22 +827,22 @@ MARK: サービス内容ハイライト（AIニュース＆30時間）
     overflow: visible;
 }
 
-#sec03 .highlights-wrapper-img {
+#sec03 .box .highlights-wrapper img.highlights-wrapper-img {
     position: absolute;
     top: 0;
     left: 50%;
     transform: translate(-50%, -55%);
-    width: 250%;
-    max-width: 2500px;
+    width: 300px;
     z-index: 10;
     pointer-events: none;
+    margin-bottom: 0;
 }
 
 #sec03 .highlight-card {
     background: #fff;
     border-radius: 12px;
-    padding: 32px 24px;
-    margin-bottom: 24px;
+    padding: 36px 28px;
+    margin-bottom: 0;
     box-shadow: 0 4px 16px rgba(0, 51, 102, 0.1);
     border: 1px solid #e8f0f8;
     transition: all 0.3s ease;
@@ -845,7 +850,7 @@ MARK: サービス内容ハイライト（AIニュース＆30時間）
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     text-align: center;
 }
 
@@ -857,25 +862,25 @@ MARK: サービス内容ハイライト（AIニュース＆30時間）
     display: inline-block;
     background: var(--blue);
     color: #fff;
-    font-size: var(--12px);
-    font-weight: 600;
-    padding: 4px 12px;
+    font-size: var(--14px);
+    font-weight: 700;
+    padding: 6px 16px;
     border-radius: 4px;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
 #sec03 .highlight-number {
     color: var(--blue);
-    font-weight: 700;
-    font-size: var(--16px);
-    margin-bottom: 12px;
+    font-weight: 800;
+    font-size: var(--18px);
+    margin-bottom: 14px;
     line-height: 1;
 }
 
 #sec03 .highlight-number .en {
-    font-size: var(--48px);
+    font-size: var(--52px);
     font-family: "DM Sans", sans-serif;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: -0.02em;
 }
 
@@ -887,18 +892,18 @@ MARK: サービス内容ハイライト（AIニュース＆30時間）
 }
 
 #sec03 .highlight-card h4 {
-    color: var(--black);
-    font-size: var(--18px);
-    font-weight: 600;
-    margin-bottom: 8px;
+    color: var(--navy);
+    font-size: var(--20px);
+    font-weight: 800;
+    margin-bottom: 10px;
     line-height: 1.4;
 }
 
 #sec03 .highlight-desc {
-    color: #666;
-    font-size: var(--14px);
-    font-weight: 400;
-    line-height: 1.7;
+    color: #444;
+    font-size: var(--15px);
+    font-weight: 600;
+    line-height: 1.8;
     margin-bottom: 0;
 }
 
