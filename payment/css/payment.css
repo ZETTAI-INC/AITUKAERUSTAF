@@ -1,0 +1,530 @@
+/* ============================================
+   Payment Page Styles - OtasukeAI
+   Uses CSS variables from style-fix2511.css:
+   --blue, --skyblue, --navy, --lightblue, --lightgray, --black
+   ============================================ */
+
+:root {
+  --gold: #FFD700;
+  --orange-gradient: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+}
+
+/* ---- Page Layout ---- */
+.payment-page {
+  min-height: 100vh;
+  background: var(--lightgray);
+}
+
+.payment-hero {
+  background: linear-gradient(135deg, #0066CC 0%, #4EAEFF 100%);
+  padding: 60px 0 50px;
+  text-align: center;
+  color: var(--white);
+}
+
+.payment-hero h1 {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.payment-hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* ---- Plan Cards ---- */
+.plans-section {
+  padding: 60px 0 80px;
+}
+
+.plan-card {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 51, 102, 0.1);
+  padding: 36px 28px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0, 51, 102, 0.15);
+}
+
+.plan-card.recommended {
+  border: 3px solid var(--blue);
+}
+
+.plan-badge {
+  display: inline-block;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 16px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+}
+
+.plan-badge.badge-gold {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.plan-name {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.plan-price {
+  font-family: 'DM Sans', 'Noto Sans JP', sans-serif;
+  margin-bottom: 8px;
+}
+
+.plan-price .amount {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--blue);
+  line-height: 1.1;
+}
+
+.plan-price .currency {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.plan-price-note {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.plan-divider {
+  border: none;
+  border-top: 1px solid #e8eef4;
+  margin: 0 0 20px 0;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  text-align: left;
+  flex-grow: 1;
+}
+
+.plan-features li {
+  padding: 8px 0;
+  font-size: 0.95rem;
+  color: var(--black);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.plan-features li::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  background: var(--skyblue);
+  border-radius: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px;
+  margin-top: 2px;
+}
+
+.plan-cta-btn {
+  display: block;
+  width: 100%;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  text-decoration: none;
+  color: var(--white);
+  background: linear-gradient(135deg, #0066CC 0%, #4EAEFF 100%);
+}
+
+.plan-cta-btn:hover {
+  background: linear-gradient(135deg, #004A99 0%, #0066CC 100%);
+  transform: translateY(-1px);
+}
+
+.plan-card.recommended .plan-cta-btn {
+  background: var(--orange-gradient);
+}
+
+.plan-card.recommended .plan-cta-btn:hover {
+  background: linear-gradient(135deg, #E55A2B 0%, #FF6B35 100%);
+}
+
+/* ---- Modal ---- */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-content {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 520px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #999;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.modal-close:hover {
+  background: #f0f0f0;
+}
+
+.modal-title {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.modal-plan-info {
+  font-size: 0.95rem;
+  color: var(--blue);
+  font-weight: 600;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e8eef4;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 6px;
+}
+
+.form-group label .required {
+  color: #E53E3E;
+  font-size: 0.75rem;
+  margin-left: 4px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid #e0e6ed;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--skyblue);
+}
+
+.form-group input.error {
+  border-color: #E53E3E;
+}
+
+.form-error {
+  font-size: 0.8rem;
+  color: #E53E3E;
+  margin-top: 4px;
+  display: none;
+}
+
+.form-error.visible {
+  display: block;
+}
+
+.payment-methods {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-credit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--orange-gradient);
+  color: var(--white);
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn-credit:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.btn-credit:disabled,
+.btn-invoice:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-invoice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px 24px;
+  border: 2px solid var(--blue);
+  border-radius: 8px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--white);
+  color: var(--blue);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.btn-invoice:hover {
+  background: var(--lightblue);
+  transform: translateY(-1px);
+}
+
+/* ---- Success & Cancel Pages ---- */
+.result-page {
+  min-height: 100vh;
+  background: var(--lightgray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 60px 48px;
+  max-width: 560px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 51, 102, 0.1);
+  margin: 20px;
+}
+
+.result-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.result-icon.success {
+  background: #E6F9EE;
+}
+
+.result-icon.cancel {
+  background: #FFF3E6;
+}
+
+.result-card h1 {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 16px;
+}
+
+.result-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.result-btn {
+  display: inline-block;
+  padding: 14px 40px;
+  border-radius: 8px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--white);
+  background: linear-gradient(135deg, #0066CC 0%, #4EAEFF 100%);
+  transition: transform 0.2s;
+}
+
+.result-btn:hover {
+  transform: translateY(-1px);
+}
+
+.result-btn-outline {
+  display: inline-block;
+  padding: 14px 40px;
+  border-radius: 8px;
+  border: 2px solid var(--blue);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--blue);
+  background: var(--white);
+  transition: transform 0.2s, background 0.2s;
+  margin-left: 12px;
+}
+
+.result-btn-outline:hover {
+  background: var(--lightblue);
+  transform: translateY(-1px);
+}
+
+/* ---- Loading Spinner ---- */
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 0.6s linear infinite;
+}
+
+.btn-invoice .spinner {
+  border: 2px solid rgba(0, 102, 204, 0.3);
+  border-top-color: var(--blue);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ---- Toast notification ---- */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--navy);
+  color: var(--white);
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  z-index: 10001;
+  opacity: 0;
+  transition: all 0.3s;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.toast.toast-success {
+  background: #2D8B4E;
+}
+
+.toast.toast-error {
+  background: #C53030;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 991px) {
+  .payment-hero h1 {
+    font-size: 1.75rem;
+  }
+  .plan-card {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .payment-hero {
+    padding: 40px 0 36px;
+  }
+  .payment-hero h1 {
+    font-size: 1.5rem;
+  }
+  .plans-section {
+    padding: 40px 0 60px;
+  }
+  .modal-content {
+    padding: 28px 20px;
+  }
+  .result-card {
+    padding: 40px 24px;
+  }
+  .result-btn-outline {
+    margin-left: 0;
+    margin-top: 12px;
+  }
+}

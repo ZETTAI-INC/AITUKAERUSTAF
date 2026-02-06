@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>料金プラン | オタスケAI</title>
+    <meta name="description" content="オタスケAIの料金プラン。ライト・スタンダード・プレミアムの3つのプランからお選びいただけます。">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!-- favicon -->
+    <link rel="icon" href="../reference/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../reference/favicon/apple-touch-icon-180x180.png">
+
+    <!-- css -->
+    <link href="../reference/css/bootstrap.css" rel="stylesheet">
+    <link href="../reference/css/style-fix2511.css" rel="stylesheet">
+    <link href="../reference/css/style.css" rel="stylesheet">
+    <link href="css/payment.css" rel="stylesheet">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- グローバルヘッダー（JS で挿入） -->
+    <script src="/reference/js/global-header.js"></script>
+
+    <div class="payment-page">
+        <!-- ヒーローセクション -->
+        <div class="payment-hero">
+            <div class="container">
+                <h1>プランのお申し込み</h1>
+                <p>ビジネスの規模に合わせて、最適なプランをお選びください</p>
+            </div>
+        </div>
+
+        <!-- プランカードセクション -->
+        <section class="plans-section">
+            <div class="container">
+                <div class="row justify-content-center">
+
+                    <!-- ライトプラン -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="plan-card">
+                            <span class="plan-badge">エントリー</span>
+                            <h3 class="plan-name">ライトプラン</h3>
+                            <div class="plan-price">
+                                <span class="amount">5</span><span class="currency">万円/月</span>
+                            </div>
+                            <p class="plan-price-note">税別</p>
+                            <hr class="plan-divider">
+                            <ul class="plan-features">
+                                <li>AIニュースレポート配信</li>
+                                <li>メールサポート対応</li>
+                                <li>AI活用に関する基本相談</li>
+                                <li>月次AIトレンドレポート</li>
+                            </ul>
+                            <button class="plan-cta-btn" data-plan="light">このプランを申し込む</button>
+                        </div>
+                    </div>
+
+                    <!-- スタンダードプラン -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="plan-card recommended">
+                            <span class="plan-badge badge-gold">おすすめ</span>
+                            <h3 class="plan-name">スタンダードプラン</h3>
+                            <div class="plan-price">
+                                <span class="amount">30</span><span class="currency">万円/月</span>
+                            </div>
+                            <p class="plan-price-note">税別</p>
+                            <hr class="plan-divider">
+                            <ul class="plan-features">
+                                <li>月30時間のAI業務代行</li>
+                                <li>同時3件まで依頼可能</li>
+                                <li>チャットでの業務依頼</li>
+                                <li>月次レポート提出</li>
+                                <li>専門チームによる対応</li>
+                            </ul>
+                            <button class="plan-cta-btn" data-plan="standard">このプランを申し込む</button>
+                        </div>
+                    </div>
+
+                    <!-- プレミアムプラン -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="plan-card">
+                            <span class="plan-badge">プロフェッショナル</span>
+                            <h3 class="plan-name">プレミアムプラン</h3>
+                            <div class="plan-price">
+                                <span class="amount">50</span><span class="currency">万円/月</span>
+                            </div>
+                            <p class="plan-price-note">税別</p>
+                            <hr class="plan-divider">
+                            <ul class="plan-features">
+                                <li>月60時間のAI業務代行</li>
+                                <li>同時依頼数 無制限</li>
+                                <li>優先対応（最短即日）</li>
+                                <li>専任担当者アサイン</li>
+                                <li>週次進捗レポート</li>
+                                <li>カスタムAIツール提案</li>
+                            </ul>
+                            <button class="plan-cta-btn" data-plan="premium">このプランを申し込む</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 申し込みモーダル -->
+    <div id="payment-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="閉じる">&times;</button>
+            <h2 class="modal-title">プランのお申し込み</h2>
+            <p class="modal-plan-info">
+                <span id="modal-plan-name"></span> ― <span id="modal-plan-price"></span>
+            </p>
+
+            <div class="form-group">
+                <label for="form-company">会社名 <span class="required">必須</span></label>
+                <input type="text" id="form-company" placeholder="例：株式会社ZETTAI">
+                <p class="form-error"></p>
+            </div>
+            <div class="form-group">
+                <label for="form-name">担当者名 <span class="required">必須</span></label>
+                <input type="text" id="form-name" placeholder="例：山田 太郎">
+                <p class="form-error"></p>
+            </div>
+            <div class="form-group">
+                <label for="form-email">メールアドレス <span class="required">必須</span></label>
+                <input type="email" id="form-email" placeholder="例：info@example.com">
+                <p class="form-error"></p>
+            </div>
+            <div class="form-group">
+                <label for="form-phone">電話番号 <span class="required">必須</span></label>
+                <input type="tel" id="form-phone" placeholder="例：03-1234-5678">
+                <p class="form-error"></p>
+            </div>
+
+            <div class="payment-methods">
+                <button id="btn-credit" class="btn-credit">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                        <line x1="1" y1="10" x2="23" y2="10"></line>
+                    </svg>
+                    クレジットカードで支払う
+                </button>
+                <button id="btn-invoice" class="btn-invoice">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path>
+                        <polyline points="14,2 14,8 20,8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                    </svg>
+                    請求書払いで申し込む
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- フッター -->
+    <footer id="footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 footer-logo-area">
+                        <a href="../" class="footer-logo">オタスケAI</a>
+                        <p class="footer-tagline">あなたの会社のAI戦力に。</p>
+                        <p class="footer-description">月30万円でAIプロ人材10人分の力を。<br>チャットで依頼するだけで、素早くアウトプットをお届けします。</p>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-nav">
+                        <h4>サービス</h4>
+                        <ul>
+                            <li><a href="../#sec03">サービス内容</a></li>
+                            <li><a href="../#output">アウトプット例</a></li>
+                            <li><a href="../reference/hrmos-price/">料金</a></li>
+                            <li><a href="../#sec08">ご利用の流れ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-nav">
+                        <h4>サポート</h4>
+                        <ul>
+                            <li><a href="../#voice">導入事例</a></li>
+                            <li><a href="../#sec10">よくある質問</a></li>
+                            <li><a href="../#form">お問い合わせ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6 footer-contact">
+                        <h4>お問い合わせ</h4>
+                        <p class="footer-tel"><a href="tel:07089608679">070-8960-8679</a></p>
+                        <p class="footer-tel-note">平日 10:00-18:00</p>
+                        <a href="../#form" class="footer-cta-btn">資料請求・お問い合わせ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p><small>Copyright &copy; 株式会社ZETTAI All Rights Reserved.</small></p>
+                <p style="font-size: 10px; color: #999; margin-top: 5px;"><small>Illustrations by <a href="https://storyset.com/" target="_blank" rel="noopener" style="color: #999;">Storyset</a></small></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- js -->
+    <script src="../reference/js/jquery.js"></script>
+    <script src="../reference/js/bootstrap.min.js"></script>
+    <script src="../reference/js/scroll-hint.min.js"></script>
+    <script src="../reference/js/modaal.js"></script>
+    <script src="../reference/js/script.js"></script>
+    <script src="js/payment.js"></script>
+</body>
+
+</html>
