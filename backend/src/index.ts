@@ -5,6 +5,7 @@ import rateLimit from 'express-rate-limit';
 import { corsOptions } from './config/cors';
 import checkoutRouter from './routes/checkout';
 import invoiceRouter from './routes/invoice';
+import contactRouter from './routes/contact';
 import webhooksRouter from './routes/webhooks';
 
 const app = express();
@@ -32,6 +33,7 @@ app.use(express.json());
 // Apply rate limiting to API routes
 app.use('/api/checkout', apiLimiter, checkoutRouter);
 app.use('/api/invoice', apiLimiter, invoiceRouter);
+app.use('/api/contact', apiLimiter, contactRouter);
 
 // Health check
 app.get('/health', (_req, res) => {

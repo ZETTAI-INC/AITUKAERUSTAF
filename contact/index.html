@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>お問い合わせ | オタスケAI</title>
+    <meta name="description" content="オタスケAIへのお問い合わせ。サービスに関するご質問・資料請求など、お気軽にご連絡ください。">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!-- favicon -->
+    <link rel="icon" href="../reference/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../reference/favicon/apple-touch-icon-180x180.png">
+
+    <!-- css -->
+    <link href="../reference/css/bootstrap.css" rel="stylesheet">
+    <link href="../reference/css/style-fix2511.css" rel="stylesheet">
+    <link href="../reference/css/style.css" rel="stylesheet">
+    <link href="css/contact.css" rel="stylesheet">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- グローバルヘッダー（JS で挿入） -->
+    <script src="/reference/js/global-header.js"></script>
+
+    <div class="contact-page">
+        <!-- ヒーローセクション -->
+        <div class="contact-hero">
+            <div class="container">
+                <h1>お問い合わせ</h1>
+                <p>サービスに関するご質問・資料請求など、お気軽にご連絡ください</p>
+            </div>
+        </div>
+
+        <!-- フォームセクション -->
+        <section class="contact-form-section">
+            <div class="container">
+                <div class="contact-form-card">
+                    <h2>お問い合わせフォーム</h2>
+                    <p class="form-lead">以下の項目をご入力のうえ、送信してください。</p>
+
+                    <form id="contact-form" class="contact-form" novalidate>
+                        <!-- 姓名 -->
+                        <div class="name-row">
+                            <div class="form-group">
+                                <label for="form-lastName">姓 <span class="required">必須</span></label>
+                                <input type="text" id="form-lastName" placeholder="例：山田">
+                                <p class="form-error"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-firstName">名 <span class="required">必須</span></label>
+                                <input type="text" id="form-firstName" placeholder="例：太郎">
+                                <p class="form-error"></p>
+                            </div>
+                        </div>
+
+                        <!-- 会社名 -->
+                        <div class="form-group">
+                            <label for="form-company">会社名 <span class="required">必須</span></label>
+                            <input type="text" id="form-company" placeholder="例：株式会社ZETTAI">
+                            <p class="form-error"></p>
+                        </div>
+
+                        <!-- メールアドレス -->
+                        <div class="form-group">
+                            <label for="form-email">メールアドレス <span class="required">必須</span></label>
+                            <input type="email" id="form-email" placeholder="例：info@example.com">
+                            <p class="form-error"></p>
+                        </div>
+
+                        <!-- 電話番号 -->
+                        <div class="form-group">
+                            <label for="form-phone">電話番号 <span class="required">必須</span></label>
+                            <input type="tel" id="form-phone" placeholder="例：03-1234-5678">
+                            <p class="form-error"></p>
+                        </div>
+
+                        <!-- お問い合わせ種別 -->
+                        <div class="form-group">
+                            <label for="form-inquiryType">お問い合わせ種別 <span class="required">必須</span></label>
+                            <select id="form-inquiryType">
+                                <option value="">選択してください</option>
+                                <option value="詳しく話を聞きたい">詳しく話を聞きたい</option>
+                                <option value="資料請求">資料請求</option>
+                                <option value="サービスに関する相談">サービスに関する相談</option>
+                                <option value="パートナー・代理店について">パートナー・代理店について</option>
+                                <option value="その他">その他</option>
+                            </select>
+                            <p class="form-error"></p>
+                        </div>
+
+                        <!-- お問い合わせ内容 -->
+                        <div class="form-group">
+                            <label for="form-inquiryDetail">お問い合わせ内容 <span class="required">必須</span></label>
+                            <textarea id="form-inquiryDetail" placeholder="お問い合わせ内容をご記入ください"></textarea>
+                            <p class="form-error"></p>
+                        </div>
+
+                        <!-- 個人情報同意 -->
+                        <div class="privacy-group">
+                            <label>
+                                <input type="checkbox" id="form-privacy">
+                                <span><a href="/#privacy" target="_blank">個人情報の取り扱い</a>に同意します</span>
+                            </label>
+                            <p class="form-error"></p>
+                        </div>
+
+                        <!-- 送信ボタン -->
+                        <button type="submit" id="contact-submit" class="contact-submit-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                            送信する
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- フッター -->
+    <footer id="footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 footer-logo-area">
+                        <a href="../" class="footer-logo">オタスケAI</a>
+                        <p class="footer-tagline">あなたの会社のAI戦力に。</p>
+                        <p class="footer-description">月30万円でAIプロ人材10人分の力を。<br>チャットで依頼するだけで、素早くアウトプットをお届けします。</p>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-nav">
+                        <h4>サービス</h4>
+                        <ul>
+                            <li><a href="../#sec03">サービス内容</a></li>
+                            <li><a href="../#output">アウトプット例</a></li>
+                            <li><a href="../reference/hrmos-price/">料金</a></li>
+                            <li><a href="../#sec08">ご利用の流れ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-nav">
+                        <h4>サポート</h4>
+                        <ul>
+                            <li><a href="../#voice">導入事例</a></li>
+                            <li><a href="../#sec10">よくある質問</a></li>
+                            <li><a href="../contact/">お問い合わせ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6 footer-contact">
+                        <h4>お問い合わせ</h4>
+                        <p class="footer-tel"><a href="tel:07089608679">070-8960-8679</a></p>
+                        <p class="footer-tel-note">平日 10:00-18:00</p>
+                        <a href="../contact/" class="footer-cta-btn">資料請求・お問い合わせ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p><small>Copyright &copy; 株式会社ZETTAI All Rights Reserved.</small></p>
+                <p style="font-size: 10px; color: #999; margin-top: 5px;"><small>Illustrations by <a href="https://storyset.com/" target="_blank" rel="noopener" style="color: #999;">Storyset</a></small></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- js -->
+    <script src="../reference/js/jquery.js"></script>
+    <script src="../reference/js/bootstrap.min.js"></script>
+    <script src="../reference/js/scroll-hint.min.js"></script>
+    <script src="../reference/js/modaal.js"></script>
+    <script src="../reference/js/script.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+
+</html>

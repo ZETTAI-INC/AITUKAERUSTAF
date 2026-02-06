@@ -22,3 +22,14 @@ export interface InvoiceRequestBody {
 }
 
 export type PlanId = 'light' | 'standard' | 'premium';
+
+export interface ContactRequestBody {
+  lastName: string;
+  firstName: string;
+  companyName: string;
+  email: string;
+  phone: string;
+  inquiryType: string;
+  inquiryDetail: string;
+  privacyConsent: boolean;
+}
