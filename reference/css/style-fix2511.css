@@ -827,8 +827,8 @@ MARK: サービス内容ハイライト（AIニュース＆30時間）
     top: 0;
     left: 50%;
     transform: translate(-50%, -55%);
-    width: 200%;
-    max-width: 2000px;
+    width: 250%;
+    max-width: 2500px;
     z-index: 10;
     pointer-events: none;
 }
