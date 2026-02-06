@@ -141,7 +141,7 @@ const PricingSection: React.FC = () => {
 
                     {/* CTA Button */}
                     <a
-                        href="/index.html#form"
+                        href="/contact/"
                         style={{
                             display: 'inline-block',
                             background: 'linear-gradient(90deg, #00BCD4 0%, #2196F3 100%)',
