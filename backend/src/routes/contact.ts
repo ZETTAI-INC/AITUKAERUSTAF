@@ -52,7 +52,7 @@ router.post('/', validateContact, async (req: Request, res: Response): Promise<v
         '---',
         'オタスケAI',
         '株式会社ZETTAI',
-        'TEL: 070-8960-8679（平日 10:00-18:00）',
+        'TEL: 0800-080-0712（平日 10:00-18:00）',
       ].join('\n'),
     });
 
