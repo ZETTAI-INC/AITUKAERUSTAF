@@ -86,7 +86,7 @@ const PricingSection: React.FC = () => {
                         marginBottom: '40px',
                         letterSpacing: '0.02em'
                     }}>
-                        バーチャルAIアシスタント
+                        OTASUKE AI
                     </h3>
 
                     {/* Amount Section with Glassmorphism-ish sharp feel */}

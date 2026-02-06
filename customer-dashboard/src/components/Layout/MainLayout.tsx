@@ -184,7 +184,7 @@ const MainLayout: React.FC = () => {
             </Text>
             {!collapsed && (
               <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.6)', marginTop: 2 }}>
-                バーチャルAIアシスタント
+                OTASUKE AI
               </div>
             )}
           </div>

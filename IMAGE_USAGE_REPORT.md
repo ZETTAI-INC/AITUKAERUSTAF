@@ -11,7 +11,7 @@
 ### ヘッダー・ナビゲーション
 | 画像パス | 用途 | 備考 |
 |---------|------|------|
-| `img/common/logo-header.svg` | ヘッダーロゴ | alt: "merryBiz バーチャル経理アシスタント" |
+| `img/common/logo-header.svg` | ヘッダーロゴ | alt: "OTASUKE AI" |
 
 ### ヒーロー・メインビジュアル
 | 画像パス | 用途 | 備考 |
@@ -147,7 +147,7 @@
 |---------|------|------|
 | `../img/common/button-icon-siryo.svg` | 資料請求ボタンアイコン | CTA |
 | `../img/common/button-icon-contact.svg` | お問い合わせボタンアイコン | CTA |
-| `/reference/img/ai-staff-logo02.png` | フッターロゴ | alt: "オタスケAI" |
+| `/reference/img/ai-staff-logo02.png` | フッターロゴ | alt: "OTASUKE AI" |
 
 ---
 
@@ -168,7 +168,7 @@
 |---------|------|------|
 | `../img/common/button-icon-siryo.svg` | 資料請求ボタンアイコン | CTA |
 | `../img/common/button-icon-contact.svg` | お問い合わせボタンアイコン | CTA |
-| `/reference/img/ai-staff-logo02.png` | フッターロゴ | alt: "オタスケAI" |
+| `/reference/img/ai-staff-logo02.png` | フッターロゴ | alt: "OTASUKE AI" |
 
 ---
 
@@ -191,7 +191,7 @@
 |---------|------|------|
 | `../img/common/button-icon-siryo.svg` | 資料請求ボタンアイコン | CTA |
 | `../img/common/button-icon-contact.svg` | お問い合わせボタンアイコン | CTA |
-| `/reference/img/ai-staff-logo02.png` | フッターロゴ | alt: "オタスケAI" |
+| `/reference/img/ai-staff-logo02.png` | フッターロゴ | alt: "OTASUKE AI" |
 
 ---
 
@@ -201,7 +201,7 @@
 
 | 画像パス | 用途 | 備考 |
 |---------|------|------|
-| `../../../reference/img/ai-staff-logo02.png` | ヘッダーロゴ | alt: "オタスケAI" |
+| `../../../reference/img/ai-staff-logo02.png` | ヘッダーロゴ | alt: "OTASUKE AI" |
 
 ---
 

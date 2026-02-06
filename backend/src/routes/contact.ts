@@ -15,7 +15,7 @@ router.post('/', validateContact, async (req: Request, res: Response): Promise<v
     await transporter.sendMail({
       from: EMAIL_FROM,
       to: EMAIL_NOTIFICATION_TO,
-      subject: `【オタスケAI】新規お問い合わせ: ${inquiryType}`,
+      subject: `【OTASUKE AI】新規お問い合わせ: ${inquiryType}`,
       text: [
         '新しいお問い合わせがありました。',
         '',
@@ -34,11 +34,11 @@ router.post('/', validateContact, async (req: Request, res: Response): Promise<v
     await transporter.sendMail({
       from: EMAIL_FROM,
       to: email,
-      subject: '【オタスケAI】お問い合わせを受け付けました',
+      subject: '【OTASUKE AI】お問い合わせを受け付けました',
       text: [
         `${fullName} 様`,
         '',
-        'この度はオタスケAIにお問い合わせいただき、誠にありがとうございます。',
+        'この度はOTASUKE AIにお問い合わせいただき、誠にありがとうございます。',
         '以下の内容でお問い合わせを受け付けました。',
         '',
         `お問い合わせ種別: ${inquiryType}`,
@@ -50,7 +50,7 @@ router.post('/', validateContact, async (req: Request, res: Response): Promise<v
         'しばらくお待ちくださいませ。',
         '',
         '---',
-        'オタスケAI',
+        'OTASUKE AI',
         '株式会社ZETTAI',
         'TEL: 0800-080-0712（平日 10:00-18:00）',
       ].join('\n'),

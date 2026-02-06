@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 /*    ––––––––––––––––––––––––––––––––––––––––––––––––––
-MARK: ヘッダー (MerryBiz Style)
+MARK: ヘッダー
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-header.merrybiz-header {
+header.site-header {
     position: fixed;
     top: 0;
     left: 0;
@@ -726,8 +726,8 @@ MARK: FV
     padding: 20px 0 0px !important;
 }
 
-/* merrybiz style FV - remove old background */
-#fv.fv-merrybiz {
+/* hero FV - remove old background */
+#fv.fv-hero {
     background-image: none !important;
     background-color: transparent !important;
     padding: 0 !important;
@@ -1634,8 +1634,8 @@ MARK: FV
         background-repeat: no-repeat;
     }
 
-    /* merrybiz style FV - remove old background */
-    #fv.fv-merrybiz {
+    /* hero FV - remove old background */
+    #fv.fv-hero {
         background-image: none !important;
         background-color: transparent !important;
         padding: 0 !important;

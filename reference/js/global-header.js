@@ -7,7 +7,7 @@
   'use strict';
 
   var HEADER_HTML = ''
-    + '<header class="merrybiz-header">'
+    + '<header class="site-header">'
     + '  <div class="header-topbar">'
     + '    <div class="container">'
     + '      <div class="topbar-left">'
@@ -20,8 +20,8 @@
     + '            </svg>'
     + '          </button>'
     + '          <div class="topbar-dropdown-menu">'
-    + '            <a href="#">バーチャルAIアシスタント</a>'
-    + '            <a href="#">オタスケAI DX</a>'
+    + '            <a href="#">OTASUKE AI</a>'
+    + '            <a href="#">OTASUKE AI DX</a>'
     + '          </div>'
     + '        </div>'
     + '      </div>'
@@ -111,7 +111,7 @@
     + '<div class="nav-overlay" id="nav-overlay"></div>';
 
   // 既存のヘッダーを置換、または body 先頭に挿入
-  var existing = document.querySelector('header.merrybiz-header');
+  var existing = document.querySelector('header.site-header');
   if (existing) {
     // nav-overlay も一緒に削除
     var existingOverlay = document.getElementById('nav-overlay');

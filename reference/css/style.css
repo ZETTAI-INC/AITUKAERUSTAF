@@ -224,7 +224,7 @@ table {
 }
 
 /*    –––––––––––––––––––––––––––––––––––––––––––––––
-FV (merrybiz style)
+FV (hero section)
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .pc_none {
     display: block;
@@ -246,7 +246,7 @@ FV (merrybiz style)
     }
 }
 
-#fv.fv-merrybiz {
+#fv.fv-hero {
     background-color: transparent;
     padding: 0;
     position: relative;

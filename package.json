@@ -1,7 +1,7 @@
 {
   "name": "otasuke-ai",
   "version": "1.0.0",
-  "description": "オタスケAI ランディングページ",
+  "description": "OTASUKE AI ランディングページ",
   "scripts": {
     "start": "serve . -l $PORT",
     "dev": "serve . -l 3000"
