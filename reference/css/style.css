@@ -1226,8 +1226,9 @@ sec03
     margin-top: 30px;
 }
 
-#sec03 .box .marker span {
+#sec03 .box .marker .marker-line {
     background: linear-gradient(transparent 75%, var(--skyblue) 80%);
+    white-space: nowrap;
 }
 
 #sec03 .box .employee {
@@ -4058,7 +4059,7 @@ Footer
     }
 
     #sec03 .box .marker {
-        font-size: var(--24px);
+        font-size: var(--20px);
     }
 
     /*sec04
