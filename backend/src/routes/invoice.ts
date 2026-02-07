@@ -7,6 +7,10 @@ const router = Router();
 
 router.post('/', validateInvoice, async (req: Request, res: Response): Promise<void> => {
   try {
+    if (!stripe) {
+      res.status(503).json({ error: '決済サービスが設定されていません。' });
+      return;
+    }
     const { planId, companyName, contactName, email, phone } = req.body as InvoiceRequestBody;
     const plan = getPlan(planId);
 

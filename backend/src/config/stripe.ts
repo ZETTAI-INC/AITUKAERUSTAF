@@ -2,12 +2,12 @@ import Stripe from 'stripe';
 import { PlanConfig, PlanId } from '../types';
 
 if (!process.env.STRIPE_SECRET_KEY) {
-  throw new Error('STRIPE_SECRET_KEY is required');
+  console.warn('WARNING: STRIPE_SECRET_KEY is not set. Stripe features will be unavailable.');
 }
 
-export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-  apiVersion: '2025-02-24.acacia',
-});
+export const stripe = process.env.STRIPE_SECRET_KEY
+  ? new Stripe(process.env.STRIPE_SECRET_KEY, { apiVersion: '2025-02-24.acacia' })
+  : (null as unknown as Stripe);
 
 // Price IDs are set in Stripe Dashboard and configured via environment variables
 export const PLANS: Record<PlanId, PlanConfig> = {
