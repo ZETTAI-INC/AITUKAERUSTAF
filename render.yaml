@@ -6,7 +6,7 @@ services:
     branch: feature/blue-design-conversion
     region: singapore
     plan: starter
-    buildCommand: cd customer-dashboard && npm install && npm run build && cp dist/index.html . && cp -r dist/assets .
+    buildCommand: cp customer-dashboard/_build/index.html customer-dashboard/index.html && cp -r customer-dashboard/_build/assets customer-dashboard/
     staticPublishPath: ./
     routes:
       - type: rewrite
