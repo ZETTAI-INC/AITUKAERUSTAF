@@ -1,8 +1,15 @@
 import cors from 'cors';
 
 const allowedOrigins = [
-  process.env.FRONTEND_URL || 'http://localhost:8080',
+  'https://otasukeai.jp',
+  'https://www.otasukeai.jp',
+  'https://otasukeai.com',
+  'https://www.otasukeai.com',
 ];
+
+if (process.env.FRONTEND_URL) {
+  allowedOrigins.push(process.env.FRONTEND_URL);
+}
 
 // Allow localhost in development
 if (process.env.NODE_ENV !== 'production') {
@@ -13,7 +20,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 export const corsOptions: cors.CorsOptions = {
   origin: (origin, callback) => {
-    // Allow requests with no origin (mobile apps, curl, etc.)
+    // Allow requests with no origin (same-origin, mobile apps, curl, etc.)
     if (!origin) {
       callback(null, true);
       return;
