@@ -3,11 +3,20 @@ import cors from 'cors';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import path from 'path';
+import fs from 'fs';
 import { corsOptions } from './config/cors';
 import checkoutRouter from './routes/checkout';
 import invoiceRouter from './routes/invoice';
 import contactRouter from './routes/contact';
 import webhooksRouter from './routes/webhooks';
+
+// Catch fatal errors to aid debugging on Render
+process.on('uncaughtException', (err) => {
+  console.error('UNCAUGHT EXCEPTION:', err);
+});
+process.on('unhandledRejection', (reason) => {
+  console.error('UNHANDLED REJECTION:', reason);
+});
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -46,13 +55,27 @@ app.get('/health', (_req, res) => {
 
 // Serve static files from project root (one level up from backend/)
 const staticRoot = path.join(__dirname, '..', '..');
+const indexPath = path.join(staticRoot, 'index.html');
+const indexExists = fs.existsSync(indexPath);
+console.log(`Static root: ${staticRoot}`);
+console.log(`index.html exists: ${indexExists}`);
 app.use(express.static(staticRoot));
 
 // Fallback: serve index.html for unmatched routes
-app.get('*', (_req, res) => {
-  res.sendFile(path.join(staticRoot, 'index.html'));
-});
+if (indexExists) {
+  app.get('*', (_req, res) => {
+    res.sendFile(indexPath, (err) => {
+      if (err) {
+        console.error('sendFile error:', err);
+        res.status(500).send('Internal Server Error');
+      }
+    });
+  });
+}
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+}).on('error', (err) => {
+  console.error('Failed to start server:', err);
+  process.exit(1);
 });
