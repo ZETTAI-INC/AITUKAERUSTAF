@@ -363,6 +363,12 @@ header.site-header {
     display: none;
 }
 
+/* モバイルメニュー専用要素（PC非表示） */
+.mobile-menu-header,
+.mobile-menu-tel {
+    display: none;
+}
+
 /* キーボードナビゲーション時のフォーカススタイル */
 .keyboard-nav a:focus,
 .keyboard-nav button:focus,
@@ -498,23 +504,25 @@ html::after {
     .hamburger {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        width: 28px;
-        height: 20px;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
         background: none;
         border: none;
         cursor: pointer;
-        padding: 0;
+        padding: 10px 6px;
         z-index: 10001;
     }
 
     .hamburger span {
         display: block;
-        width: 100%;
+        width: 32px;
         height: 3px;
         background-color: var(--blue);
         border-radius: 2px;
         transition: 0.3s;
+        margin: 3px 0;
     }
 
     .hamburger.active span:nth-child(1) {
@@ -529,24 +537,89 @@ html::after {
         transform: rotate(-45deg) translate(5px, -5px);
     }
 
+    /* モバイルメニューヘッダー（ロゴ＋閉じるボタン） */
+    .mobile-menu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #003366;
+        padding: 16px 20px;
+    }
+
+    .mobile-menu-logo {
+        font-family: 'DM Sans', 'Noto Sans JP', sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: 0.02em;
+    }
+
+    .mobile-menu-logo .logo-ai {
+        color: #4EAEFF;
+        font-weight: 800;
+    }
+
+    .mobile-menu-close {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 32px;
+        line-height: 1;
+        cursor: pointer;
+        padding: 4px 8px;
+        opacity: 0.85;
+        transition: opacity 0.2s ease;
+    }
+
+    .mobile-menu-close:hover {
+        opacity: 1;
+    }
+
+    /* モバイルメニュー電話番号バー */
+    .mobile-menu-tel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: #002244;
+        color: #fff;
+        text-decoration: none;
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        transition: background 0.2s ease;
+    }
+
+    .mobile-menu-tel:hover {
+        background: #001a33;
+        color: #fff;
+    }
+
+    .mobile-menu-tel svg {
+        flex-shrink: 0;
+    }
+
     /* モバイルナビゲーション */
     .main-nav {
         position: fixed;
         top: 0;
         right: -100%;
         width: 85%;
-        max-width: 320px;
+        max-width: 340px;
         height: 100vh;
         background: #fff;
         flex-direction: column;
         justify-content: flex-start;
         align-items: stretch;
         gap: 0;
-        padding: 80px 0 40px;
+        padding: 0 0 40px;
         transition: 0.3s ease;
         z-index: 10000;
         box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .main-nav.active {
@@ -565,15 +638,18 @@ html::after {
 
     .nav-list>li>a,
     .nav-dropdown-btn {
-        padding: 16px 24px;
+        padding: 18px 24px;
         width: 100%;
-        font-size: 15px;
+        font-size: 16px;
+        font-weight: 500;
         justify-content: space-between;
     }
 
     .nav-list>li>a:hover,
-    .nav-dropdown-btn:hover {
-        background: #f5f9ff;
+    .nav-list>li>a:active,
+    .nav-dropdown-btn:hover,
+    .nav-dropdown-btn:active {
+        background: #f0f7ff;
     }
 
     /* モバイルドロップダウン */
@@ -604,13 +680,14 @@ html::after {
     .nav-cta-buttons {
         flex-direction: column;
         padding: 24px;
-        gap: 12px;
+        gap: 14px;
     }
 
     .nav-cta {
         justify-content: center;
-        padding: 14px 20px;
-        font-size: 14px;
+        padding: 16px 20px;
+        font-size: 15px;
+        border-radius: 8px;
     }
 
     /* オーバーレイ */

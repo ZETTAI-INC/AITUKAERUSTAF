@@ -94,6 +94,16 @@ $(function(){
         }
     });
 
+    // モバイルメニュー閉じるボタン
+    $(document).on('click', '#mobile-menu-close', function(){
+        hamburger.removeClass('active');
+        navMenu.removeClass('active');
+        navOverlay.removeClass('active');
+        hamburger.attr('aria-expanded', 'false');
+        hamburger.attr('aria-label', 'メニューを開く');
+        $('body').css('overflow', '');
+    });
+
     // オーバーレイクリックで閉じる
     navOverlay.click(function(){
         hamburger.removeClass('active');
