@@ -36,7 +36,7 @@ const theme = {
 const App: React.FC = () => {
   return (
     <ConfigProvider locale={jaJP} theme={theme}>
-      <BrowserRouter>
+      <BrowserRouter basename="/customer-dashboard">
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<Dashboard />} />
