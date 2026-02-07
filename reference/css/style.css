@@ -1586,15 +1586,23 @@ sec07
     margin: 0 auto 10px;*/
 }
 
+#sec07 .row {
+    align-items: stretch;
+}
+
+#sec07 .row > [class*="col-"] {
+    display: flex;
+    margin-bottom: 40px;
+}
+
 #sec07 .box {
     background-color: var(--lightgray);
     border-radius: 6px;
     padding: 60px;
     text-align: center;
-    margin-bottom: 40px;
-    min-height: 480px;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 #sec07 .box img {
@@ -3739,9 +3747,12 @@ Footer
         margin: 0 auto 5px;
     }
 
+    #sec07 .row > [class*="col-"] {
+        margin-bottom: 20px;
+    }
+
     #sec07 .box {
         padding: 40px 30px 20px;
-        margin-bottom: 20px;
     }
 
     #sec07 .box h5 {

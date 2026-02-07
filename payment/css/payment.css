@@ -115,7 +115,7 @@
   font-size: 3.2rem;
   font-weight: 900;
   color: #111111;
-  line-height: 1.1;
+  line-height: 1.3;
 }
 
 .plan-card.recommended .plan-price .amount {
@@ -131,7 +131,7 @@
 .plan-price-note {
   font-size: 0.8rem;
   color: #999999;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 
 .plan-divider {
