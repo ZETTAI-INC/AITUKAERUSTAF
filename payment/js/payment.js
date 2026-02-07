@@ -5,10 +5,10 @@
 (function () {
   'use strict';
 
-  // API base URL - configure per environment
+  // API base URL - same origin in production, localhost:3001 for local dev
   var API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
     ? 'http://localhost:3001'
-    : 'https://otasuke-ai-backend.onrender.com';
+    : '';
 
   // State
   var selectedPlanId = null;

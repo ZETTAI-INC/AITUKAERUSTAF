@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
+import path from 'path';
 import { corsOptions } from './config/cors';
 import checkoutRouter from './routes/checkout';
 import invoiceRouter from './routes/invoice';
@@ -11,10 +12,13 @@ import webhooksRouter from './routes/webhooks';
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Security headers
-app.use(helmet());
+// Security headers (relaxed for static file serving)
+app.use(helmet({
+  contentSecurityPolicy: false,
+  crossOriginEmbedderPolicy: false,
+}));
 
-// Rate limiting
+// Rate limiting for API routes only
 const apiLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 30,
@@ -40,6 +44,15 @@ app.get('/health', (_req, res) => {
   res.json({ status: 'ok' });
 });
 
+// Serve static files from project root (one level up from backend/)
+const staticRoot = path.join(__dirname, '..', '..');
+app.use(express.static(staticRoot));
+
+// Fallback: serve index.html for unmatched routes
+app.get('*', (_req, res) => {
+  res.sendFile(path.join(staticRoot, 'index.html'));
+});
+
 app.listen(PORT, () => {
-  console.log(`Backend server running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });

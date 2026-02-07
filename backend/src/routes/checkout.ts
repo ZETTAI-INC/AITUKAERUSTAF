@@ -20,7 +20,7 @@ router.post('/', validateCheckout, async (req: Request, res: Response): Promise<
       return;
     }
 
-    const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:8080';
+    const frontendUrl = process.env.FRONTEND_URL || 'https://otasukeai.jp';
 
     const metadata: Record<string, string> = { planId };
     if (companyName) metadata.companyName = companyName;
