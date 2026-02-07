@@ -18,12 +18,16 @@
   var modal = document.getElementById('payment-modal');
   var modalPlanName = document.getElementById('modal-plan-name');
   var modalPlanPrice = document.getElementById('modal-plan-price');
+  var paymentMethodsSelect = document.getElementById('payment-methods-select');
+  var invoiceForm = document.getElementById('invoice-form');
   var formCompany = document.getElementById('form-company');
   var formName = document.getElementById('form-name');
   var formEmail = document.getElementById('form-email');
   var formPhone = document.getElementById('form-phone');
   var btnCredit = document.getElementById('btn-credit');
+  var btnInvoiceSelect = document.getElementById('btn-invoice-select');
   var btnInvoice = document.getElementById('btn-invoice');
+  var btnBack = document.getElementById('btn-back');
 
   // Plan data for modal display
   var planData = {
@@ -42,11 +46,9 @@
     modalPlanName.textContent = plan.name;
     modalPlanPrice.textContent = plan.price;
 
-    // Reset form
-    formCompany.value = '';
-    formName.value = '';
-    formEmail.value = '';
-    formPhone.value = '';
+    // Show payment method selection, hide invoice form
+    paymentMethodsSelect.style.display = '';
+    invoiceForm.style.display = 'none';
     clearErrors();
 
     modal.classList.add('active');
@@ -61,7 +63,23 @@
     resetButtons();
   }
 
-  // ---- Form Validation ----
+  function showInvoiceForm() {
+    paymentMethodsSelect.style.display = 'none';
+    invoiceForm.style.display = '';
+    formCompany.value = '';
+    formName.value = '';
+    formEmail.value = '';
+    formPhone.value = '';
+    clearErrors();
+  }
+
+  function showPaymentMethods() {
+    invoiceForm.style.display = 'none';
+    paymentMethodsSelect.style.display = '';
+    clearErrors();
+  }
+
+  // ---- Form Validation (invoice only) ----
 
   function clearErrors() {
     var errors = document.querySelectorAll('.form-error');
@@ -82,7 +100,7 @@
     errorEl.classList.add('visible');
   }
 
-  function validateForm() {
+  function validateInvoiceForm() {
     clearErrors();
     var valid = true;
 
@@ -106,23 +124,12 @@
     return valid;
   }
 
-  function getFormData() {
-    return {
-      planId: selectedPlanId,
-      companyName: formCompany.value.trim(),
-      contactName: formName.value.trim(),
-      email: formEmail.value.trim(),
-      phone: formPhone.value.trim()
-    };
-  }
-
   // ---- Button States ----
 
   function setLoading(button, loading) {
     if (loading) {
       button.disabled = true;
       button.dataset.originalText = button.innerHTML;
-      var spinnerColor = button === btnInvoice ? '' : '';
       button.innerHTML = '<span class="spinner"></span> 処理中...';
     } else {
       button.disabled = false;
@@ -141,18 +148,15 @@
 
   function handleCheckout() {
     if (isSubmitting) return;
-    if (!validateForm()) return;
 
     isSubmitting = true;
     setLoading(btnCredit, true);
-    btnInvoice.disabled = true;
-
-    var data = getFormData();
+    btnInvoiceSelect.disabled = true;
 
     fetch(API_BASE + '/api/checkout', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
+      body: JSON.stringify({ planId: selectedPlanId })
     })
       .then(function (res) { return res.json(); })
       .then(function (result) {
@@ -162,24 +166,31 @@
           showToast(result.error || '決済セッションの作成に失敗しました', 'error');
           isSubmitting = false;
           resetButtons();
+          btnInvoiceSelect.disabled = false;
         }
       })
       .catch(function () {
         showToast('通信エラーが発生しました。しばらく経ってからお試しください。', 'error');
         isSubmitting = false;
         resetButtons();
+        btnInvoiceSelect.disabled = false;
       });
   }
 
   function handleInvoice() {
     if (isSubmitting) return;
-    if (!validateForm()) return;
+    if (!validateInvoiceForm()) return;
 
     isSubmitting = true;
     setLoading(btnInvoice, true);
-    btnCredit.disabled = true;
 
-    var data = getFormData();
+    var data = {
+      planId: selectedPlanId,
+      companyName: formCompany.value.trim(),
+      contactName: formName.value.trim(),
+      email: formEmail.value.trim(),
+      phone: formPhone.value.trim()
+    };
 
     fetch(API_BASE + '/api/invoice', {
       method: 'POST',
@@ -257,12 +268,24 @@
     }
   });
 
-  // Payment buttons
+  // Credit card → direct to Stripe
   if (btnCredit) {
     btnCredit.addEventListener('click', handleCheckout);
   }
+
+  // Invoice select → show form
+  if (btnInvoiceSelect) {
+    btnInvoiceSelect.addEventListener('click', showInvoiceForm);
+  }
+
+  // Invoice submit
   if (btnInvoice) {
     btnInvoice.addEventListener('click', handleInvoice);
+  }
+
+  // Back button
+  if (btnBack) {
+    btnBack.addEventListener('click', showPaymentMethods);
   }
 
 })();

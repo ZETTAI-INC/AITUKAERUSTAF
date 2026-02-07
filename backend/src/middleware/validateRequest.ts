@@ -17,6 +17,29 @@ export function validateCheckout(req: Request, res: Response, next: NextFunction
   if (!body.planId || !VALID_PLAN_IDS.includes(body.planId)) {
     errors.push('有効なプランを選択してください');
   }
+
+  if (errors.length > 0) {
+    res.status(400).json({ error: errors.join(', ') });
+    return;
+  }
+
+  // Sanitize optional inputs
+  if (body.companyName) req.body.companyName = sanitize(body.companyName);
+  if (body.contactName) req.body.contactName = sanitize(body.contactName);
+  if (body.email) req.body.email = body.email.trim().toLowerCase();
+  if (body.phone) req.body.phone = body.phone.trim();
+
+  next();
+}
+
+export function validateInvoice(req: Request, res: Response, next: NextFunction): void {
+  const body = req.body as InvoiceRequestBody;
+
+  const errors: string[] = [];
+
+  if (!body.planId || !VALID_PLAN_IDS.includes(body.planId)) {
+    errors.push('有効なプランを選択してください');
+  }
   if (!body.companyName || body.companyName.trim().length === 0) {
     errors.push('会社名を入力してください');
   }
@@ -42,11 +65,6 @@ export function validateCheckout(req: Request, res: Response, next: NextFunction
   req.body.phone = body.phone.trim();
 
   next();
-}
-
-export function validateInvoice(req: Request, res: Response, next: NextFunction): void {
-  // Same validation as checkout
-  validateCheckout(req, res, next);
 }
 
 const VALID_INQUIRY_TYPES = [

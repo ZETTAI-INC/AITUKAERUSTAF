@@ -7,10 +7,10 @@ export interface PlanConfig {
 
 export interface CheckoutRequestBody {
   planId: string;
-  companyName: string;
-  contactName: string;
-  email: string;
-  phone: string;
+  companyName?: string;
+  contactName?: string;
+  email?: string;
+  phone?: string;
 }
 
 export interface InvoiceRequestBody {

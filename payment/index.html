@@ -129,28 +129,8 @@
                 <span id="modal-plan-name"></span> ― <span id="modal-plan-price"></span>
             </p>
 
-            <div class="form-group">
-                <label for="form-company">会社名 <span class="required">必須</span></label>
-                <input type="text" id="form-company" placeholder="例：株式会社ZETTAI">
-                <p class="form-error"></p>
-            </div>
-            <div class="form-group">
-                <label for="form-name">担当者名 <span class="required">必須</span></label>
-                <input type="text" id="form-name" placeholder="例：山田 太郎">
-                <p class="form-error"></p>
-            </div>
-            <div class="form-group">
-                <label for="form-email">メールアドレス <span class="required">必須</span></label>
-                <input type="email" id="form-email" placeholder="例：info@example.com">
-                <p class="form-error"></p>
-            </div>
-            <div class="form-group">
-                <label for="form-phone">電話番号 <span class="required">必須</span></label>
-                <input type="tel" id="form-phone" placeholder="例：03-1234-5678">
-                <p class="form-error"></p>
-            </div>
-
-            <div class="payment-methods">
+            <!-- 支払い方法選択（初期表示） -->
+            <div id="payment-methods-select" class="payment-methods">
                 <button id="btn-credit" class="btn-credit">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
@@ -158,7 +138,7 @@
                     </svg>
                     クレジットカードで支払う
                 </button>
-                <button id="btn-invoice" class="btn-invoice">
+                <button id="btn-invoice-select" class="btn-invoice">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path>
                         <polyline points="14,2 14,8 20,8"></polyline>
@@ -167,6 +147,43 @@
                     </svg>
                     請求書払いで申し込む
                 </button>
+            </div>
+
+            <!-- 請求書払いフォーム（非表示） -->
+            <div id="invoice-form" style="display: none;">
+                <p class="invoice-form-heading">請求書送付先の情報を入力してください</p>
+                <div class="form-group">
+                    <label for="form-company">会社名 <span class="required">必須</span></label>
+                    <input type="text" id="form-company" placeholder="例：株式会社ZETTAI">
+                    <p class="form-error"></p>
+                </div>
+                <div class="form-group">
+                    <label for="form-name">担当者名 <span class="required">必須</span></label>
+                    <input type="text" id="form-name" placeholder="例：山田 太郎">
+                    <p class="form-error"></p>
+                </div>
+                <div class="form-group">
+                    <label for="form-email">メールアドレス <span class="required">必須</span></label>
+                    <input type="email" id="form-email" placeholder="例：info@example.com">
+                    <p class="form-error"></p>
+                </div>
+                <div class="form-group">
+                    <label for="form-phone">電話番号 <span class="required">必須</span></label>
+                    <input type="tel" id="form-phone" placeholder="例：03-1234-5678">
+                    <p class="form-error"></p>
+                </div>
+                <div class="payment-methods">
+                    <button id="btn-invoice" class="btn-invoice">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path>
+                            <polyline points="14,2 14,8 20,8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                        </svg>
+                        請求書を送信する
+                    </button>
+                    <button id="btn-back" class="btn-back">戻る</button>
+                </div>
             </div>
         </div>
     </div>

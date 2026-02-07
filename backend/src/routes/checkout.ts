@@ -22,6 +22,11 @@ router.post('/', validateCheckout, async (req: Request, res: Response): Promise<
 
     const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:8080';
 
+    const metadata: Record<string, string> = { planId };
+    if (companyName) metadata.companyName = companyName;
+    if (contactName) metadata.contactName = contactName;
+    if (phone) metadata.phone = phone;
+
     const session = await stripe.checkout.sessions.create({
       mode: 'subscription',
       payment_method_types: ['card'],
@@ -31,13 +36,8 @@ router.post('/', validateCheckout, async (req: Request, res: Response): Promise<
           quantity: 1,
         },
       ],
-      customer_email: email,
-      metadata: {
-        planId,
-        companyName,
-        contactName,
-        phone,
-      },
+      ...(email ? { customer_email: email } : {}),
+      metadata,
       success_url: `${frontendUrl}/payment/success.html?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${frontendUrl}/payment/cancel.html`,
       locale: 'ja',
