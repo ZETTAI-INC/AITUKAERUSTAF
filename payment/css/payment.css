@@ -104,6 +104,11 @@
   font-weight: 700;
   color: #111111;
   margin-bottom: 12px;
+  position: static;
+}
+
+.plan-name:after {
+  display: none;
 }
 
 .plan-price {
