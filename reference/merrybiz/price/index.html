@@ -154,10 +154,6 @@
       position: relative !important;
     }
 
-    body {
-      padding-top: 110px !important
-    }
-
     .page-single {
       padding-top: 20px
     }
@@ -439,17 +435,6 @@
 
   <script>
     $(function () {
-      $('#hamburger').click(function () {
-        $(this).toggleClass('active');
-        $('#nav-menu').toggleClass('active');
-        $('#nav-overlay').toggleClass('active');
-      });
-      $('#nav-overlay').click(function () {
-        $('#hamburger').removeClass('active');
-        $('#nav-menu').removeClass('active');
-        $(this).removeClass('active');
-      });
-
       // タブ切り替え機能
       var tabs = $('.price__category li');
       var sections = {
@@ -477,6 +462,7 @@
       });
     });
   </script>
+  <script src="/reference/js/script.js"></script>
 
 </body>
 

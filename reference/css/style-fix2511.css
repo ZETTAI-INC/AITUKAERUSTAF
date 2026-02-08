@@ -14,8 +14,14 @@ header.site-header {
 }
 
 /* 外部CSSからヘッダーを保護（merrybiz等の汎用スタイル干渉防止） */
+header.site-header * {
+    box-sizing: border-box;
+}
+
 header.site-header a {
     opacity: 1;
+    color: inherit;
+    text-decoration: none;
     transition: color 0.3s ease;
 }
 
@@ -29,12 +35,42 @@ header.site-header ul {
     padding: 0;
 }
 
-header.site-header button {
-    font-family: inherit;
+header.site-header li {
+    list-style-type: none;
+    font-size: inherit;
+    font-weight: inherit;
 }
 
-header.site-header * {
-    box-sizing: border-box;
+header.site-header button {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+header.site-header h1,
+header.site-header h2,
+header.site-header h3,
+header.site-header h4,
+header.site-header h5,
+header.site-header h6 {
+    font-weight: inherit;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+header.site-header img {
+    border: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+header.site-header span {
+    font-size: inherit;
+    font-weight: inherit;
 }
 
 /* トップバー */

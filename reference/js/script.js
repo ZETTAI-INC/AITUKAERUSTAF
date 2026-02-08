@@ -1,12 +1,14 @@
 
 //==================== スクロールテーブル ====================
 window.addEventListener('DOMContentLoaded', function () {
-    new ScrollHint('.js-scrollable', {
-    suggestiveShadow: true,
-    i18n: {
-        scrollable: "横スクロール"
-    }
-    });
+    try {
+        new ScrollHint('.js-scrollable', {
+        suggestiveShadow: true,
+        i18n: {
+            scrollable: "横スクロール"
+        }
+        });
+    } catch(e) { /* ScrollHint not available on this page */ }
 });
 
 
@@ -27,7 +29,8 @@ $(function(){
 
 //==================== アウトプット ポップアップ====================
 
- $(".modal-btn").modaal({
+try {
+  $(".modal-btn").modaal({
         hide_close: true,
         overlay_close:true,
         width:1000,
@@ -67,6 +70,7 @@ $(function(){
     $('.inline_close04').click(function(){
 	$('.modal04').modaal('close04');
   });
+} catch(e) { /* modaal not available on this page */ }
 
 
 //==================== ハンバーガーメニュー ====================
